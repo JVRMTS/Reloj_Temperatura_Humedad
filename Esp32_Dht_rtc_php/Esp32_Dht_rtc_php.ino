@@ -13,7 +13,6 @@
 #include <Time.h>
 #include <LiquidCrystal_I2C.h>
 #include <DHT.h>
-//#include <analogWrite.h>
 #include <Wire.h>
 #define DHTTYPE DHT22   // Se define el tipo de DHT: DHT 22
 #define DHTPIN 27 // Se define el puerto al que conectamos el Sensor DHT: pin digital 27
