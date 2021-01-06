@@ -17,15 +17,13 @@
 #include <Wire.h>
 #define DHTTYPE DHT22   // Se define el tipo de DHT: DHT 22
 #define DHTPIN 27 // Se define el puerto al que conectamos el Sensor DHT: pin digital 27
-//const int pinLCD =2; // Se define el pin al que conectamos la retroiluminación del LCD en mi caso el 2
-//const int pinLDR =4; // Se define el pin al que conectamos el LDR, en mi caso el 4
 
 // Conectamos con la WiFi y sincronizamos el reloj con el servidor NTP
-const char* ssid       = "JMTS";
-const char* password   = "JAVIER276MTS";
-const char* ntpServer = "pool.ntp.org";
-const long  gmtOffset_sec = 3600;
-const int   daylightOffset_sec = 3600;
+const char* ssid       = "tu WiFi";
+const char* password   = "la contraseña de tu WiFi";
+const char* ntpServer = "pool.ntp.org";// Servidor NTP para sincronizar el reloj
+const long  gmtOffset_sec = 3600; // Selección de la zona horaria GMT+1
+const int   daylightOffset_sec = 3600; // Configuración para el horario de verano
 
 // Configuramos la direccion de la base de datos
 byte server[] = { 192,168,1,4 }; // Direccion IP del servidor 

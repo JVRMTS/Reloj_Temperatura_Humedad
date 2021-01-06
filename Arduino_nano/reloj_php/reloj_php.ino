@@ -33,10 +33,10 @@ void setup() {
 }
 
 void loop() {
-  mostrarReloj();
-  delay(1000);
+  mostrarReloj();// Llamamos a la función para mostrar los datos en el LCD
+  delay(1000);// Esperamos un segundo para actualizar la información
 }
-
+// Función para poner en castellano el día de la semana en el calendario
 char* dSem(){
 DateTime now = RTC.now(); // Obtiene la fecha y hora del RTC  
 byte diaSemana = now.dayOfTheWeek();
@@ -65,6 +65,7 @@ char* diaS;
     }
   return  diaS;
 }
+// Función para mostrar los datos del calendario, temperatura, humedad y sensación térmica en la pantalla LCD2004
 void mostrarReloj(){
 
   DateTime now = RTC.now(); // Obtiene la fecha y hora del RTC

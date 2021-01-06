@@ -16,23 +16,25 @@
 
 
 DHT dht(DHTPIN, DHTTYPE); // Se define el objeto dht
-byte mac[] = {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED};
-IPAddress ip(192, 168, 1, 22);
-//IPAddress gatewaw(192, 168 , 1, 1);
+byte mac[] = {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED}; // Dirección MAC asignada a la shield ethernet
+IPAddress ip(192, 168, 1, 22); // Dirección IP asignada a la shield ethernet
+//IPAddress gatewaw(192, 168 , 1, 1); 
 //IPAddress subnet(255, 255, 255, 0);
 byte server[] = { 192,168,1,4 }; // Direccion IP del servidor
-EthernetClient client; 
+EthernetClient client; // Iniciamos el cliente ethernet
+// Preparamos el contador para actualizar la base de datos se hara cada minuto
 long previosMillis = 0;
 long intervalo = 59999;
 
 void setup() {
-  Serial.begin(115200);
-  Ethernet.begin(mac, ip);
+  Serial.begin(115200); // inicamos el puerto serie
+  Ethernet.begin(mac, ip); // iniciamos el shield ethernet con su MAC y su IP
   dht.begin(); // se inicia la lectura del dht
-  enviarBD();
+  enviarBD(); // al arrancar enviamos los primeros datos
 }
 
 void loop() {
+  // usamos el contador para enviar los datos a la base de datos
   unsigned long currentMillis = millis();
   if (currentMillis - previosMillis > intervalo){
     previosMillis = currentMillis;
@@ -40,13 +42,13 @@ void loop() {
   }
   delay(1);
 }
-
+// Función para enviar por Get los datos del sensor a la base de datos
 void enviarBD(){
 
    double tp=dht.readTemperature();
    double h=dht.readHumidity();
    double hic=dht.computeHeatIndex(tp,h,false);
-   int ub = 1; // Ubicación (1-despacho) (2-salÓn)
+   int ub = 1; // Ubicación (1-despacho) (2-salón)
   
    Serial.println("Connecting...");
   if  (client.connect(server, 80)>0) {  // Conexion con el servidor
