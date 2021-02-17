@@ -19,8 +19,8 @@
 #define DHTPIN 27 // Se define el puerto al que conectamos el Sensor DHT: pin digital 27
 WiFiMulti wifiMulti;
 // Conectamos con la WiFi y sincronizamos el reloj con el servidor NTP
-const char* ssid       = "JMTS1";
-const char* password   = "JAVIER276MTS";
+const char* ssid       = "****";
+const char* password   = "****";
 const char* ntpServer = "pool.ntp.org";// Servidor NTP para sincronizar el reloj
 const long  gmtOffset_sec = 3600; // Selección de la zona horaria GMT+1
 const int   daylightOffset_sec = 3600; // Configuración para el horario de verano
