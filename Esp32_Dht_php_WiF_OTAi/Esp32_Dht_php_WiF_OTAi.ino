@@ -20,8 +20,8 @@
 #define DHTTYPE DHT22   // Se define el tipo de DHT: DHT 22
 #define DHTPIN 27 // Se define el puerto al que conectamos el Sensor DHT: pin digital 27
 
-const char* ssid = "JMTS";
-const char* password = "JAVIER276MTS";
+const char* ssid = "****";
+const char* password = "****";
 
 // Confinguramos el servidor NTP
 const char* ntpServer = "pool.ntp.org";// Servidor NTP para sincronizar el reloj
