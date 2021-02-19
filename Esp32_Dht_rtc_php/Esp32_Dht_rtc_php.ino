@@ -39,36 +39,13 @@ void fecha(){
   struct tm timeinfo;
   
   if(!getLocalTime(&timeinfo)){
-    Serial.println("Failed to obtain time");
+    Serial.println("Fallo al obtener fecha y hora");
     return;
     }
  // Conseguir el día de la semana corto en castellano 
-  byte diaSemana = timeinfo.tm_wday;
-  char* diaS;
-  if (diaSemana ==0){
-    diaS="Dom";
-    }
-  else if (diaSemana ==1){
-    diaS="Lun";
-    }
-  else if (diaSemana ==2){
-    diaS="Mar";
-    }
-  else if (diaSemana ==3){
-    diaS="Mie";
-    }
-  else if (diaSemana ==4){
-    diaS="Jue";
-    }
-  else if (diaSemana ==5){
-    diaS="Vie";
-    }
-  else{
-    diaS="Sab";
-    }
+    String diaSemana[] = {"Dom","Lun","Mar","Mie","Jue","Vie","Sab"};
+    String diaS = diaSemana[timeinfo.tm_wday];
     
-    //Serial.print(diaS);
-    //Serial.println(&timeinfo, " %d/%m/%Y %H:%M");
     lcd.print(diaS);
     lcd.print(&timeinfo, " %d/%m/%Y %H:%M");
 }
