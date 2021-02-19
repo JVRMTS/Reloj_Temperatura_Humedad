@@ -6,7 +6,7 @@
  * Hora a traves de servidor NTP basado en el ejemplo SimpleTime de la libreria del ESP32
  * Conexión a base de datos Mysql mediante php por GET para realizar un registro
  * La retroiluminación del LCD se gradua mediante un potenciometro
- * 07/02/2021
+ * 19/02/2021
  */
  
 #include <WiFi.h>
@@ -34,7 +34,8 @@ WiFiClient client; // Activamos el cliente web
 
 // Iniciamos los contadores para insertar en la base de datos
 long previosMillis = 0;
-long intervalo = 59000;
+long intervalo_0= 60000;
+long intervalo_1 = 1000;
 
 LiquidCrystal_I2C lcd (0x27,20,4);
 DHT dht(DHTPIN, DHTTYPE);
@@ -199,16 +200,14 @@ void loop() {
     configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
     }
     
-  // Llamamos a la función para imprimir los datos en el LCD
-  mostrarReloj();
-  // Llamamos cada minuto a la función para enviar los datos a la base de datos
+  // Llamamos a la función para imprimir los datos en el LCD cada segundo
   unsigned long currentMillis = millis();
-  if (currentMillis - previosMillis > intervalo){
+  if (currentMillis - previosMillis > intervalo_1){
+    mostrarReloj();
+  }
+  // Llamamos cada minuto a la función para enviar los datos a la base de datos cada minuto
+  if (currentMillis - previosMillis > intervalo_0){
     previosMillis = currentMillis;
     enviarBD();
-    //WiFi.disconnect(true);
   }
-
-  // Actualizamos el reloj cada segundo
-  delay(1000);
 }

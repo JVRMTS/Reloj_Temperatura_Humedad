@@ -6,7 +6,7 @@
  * Hora a traves de servidor NTP basado en el ejemplo SimpleTime de la libreria del ESP32
  * Conexión a base de datos Mysql mediante php por GET para realizar un registro
  * La retroiluminación del LCD se gradua mediante un potenciometro
- * 01/01/2021
+ * 19/02/2021
  */
 
 #include <WiFi.h>
@@ -30,7 +30,8 @@ WiFiClient client; // Activamos el cliente web
 
 // Iniciamos los contadores para insertar en la base de datos
 long previosMillis = 0;
-long intervalo = 59000;
+long intervalo_0= 60000;
+long intervalo_1 = 1000;
 
 LiquidCrystal_I2C lcd (0x27,20,4);
 DHT dht(DHTPIN, DHTTYPE);
@@ -64,7 +65,6 @@ void mostrarReloj(){
   String t2("Humedad: "+Hum+" "+p); // Se crea la cadena de la humedad
   String t3("Sen.Termic.: "+TeR+g+"C"); // Se crea la cadena de la sensacion termica
   
-
   lcd.setCursor(0,0); // Situamos el cursor en la primera linea del LCD
   fecha(); // Se imprime el día de la semana, fecha y hora en el LCD
   lcd.setCursor(0,1); // Se situa el cursor en la segunda linea del LCD
@@ -73,18 +73,17 @@ void mostrarReloj(){
   lcd.print(t2); // Se imprime la humedad en el LCD
   lcd.setCursor(0,3); // Se situa el cursor en la cuarta linea
   lcd.print(t3); // Se imprime la sensacion termica en el LCD
-  
-  delay(1000); // La informaci¢n en el LCD se actualiza cada 1 seg.
 }
+
 // Enviar los datos de temperatura, humedad y sensación termica a la base de datos mediate GET en php.
 void enviarBD(){
   // Leemos las variables de temperatura, humedad y el cálculo de la senación térmica
   double tp=dht.readTemperature();
   double h=dht.readHumidity();
   double hic=dht.computeHeatIndex(tp,h,false);
-  int ub = 2; // Ubicación (1-despacho) (2-salon)
+  int ub = 1; // Ubicación (1-despacho) (2-salon) (3-pruebas)
   // Nos conectamos a la base de datos y enviamos las medidas del sensor
-  Serial.println("Connecting...");
+  Serial.println("Conectando...");
   if  (client.connect(server, 80)>0) {  // Conexion con el servidor
   // Introducimos las variables por GET 
     client.print F(("GET /sensores/iot.php?t=")); // Enviamos los datos por GET
@@ -98,17 +97,29 @@ void enviarBD(){
     client.println(F(" HTTP/1.0"));
     client.println(F("User-Agent: Arduino 1.0"));
     client.println();
-    //Serial.println("Conectado");
   } else {
     Serial.println("Fallo en la conexion");
   }
   if (!client.connected()) {
-    Serial.println("Disconnected!");
+    Serial.println("Desconectado");
   }
   // Paramos y limpiamos el cliente
   client.stop();
   client.flush();
-  
+  Serial.println("Desconectado");
+}
+
+void conectarWiFi(){
+  Serial.println("Arrancando");
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, password);
+  while (WiFi.waitForConnectResult() != WL_CONNECTED) {
+    Serial.println("Conexion fallida! Reseteando...");
+    delay(5000);
+    ESP.restart();
+  }
+  //Iniciamos y configuramos el reloj
+  configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
 }
 
 void setup(){
@@ -118,38 +129,27 @@ void setup(){
   lcd.backlight(); // Se enciende la retroiluminación del lcd
   lcd.clear(); // Se borra la pantalla del lcd
   dht.begin(); // Se inicia la lectura del dht
-  
-  //connect to WiFi
-  Serial.printf("Connecting to %s ", ssid);
-  WiFi.begin(ssid, password);
-  while (WiFi.status() != WL_CONNECTED) {
-      delay(500);
-      Serial.print(".");
-  }
-  Serial.println(" CONNECTED");
-  Serial.println(WiFi.localIP());
-  Serial.println("MAC address: ");
-  Serial.println(WiFi.macAddress());
-  //Iniciamos y configuramos el reloj
-  configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
-  
-  //fecha();
-  //disconnect WiFi as it's no longer needed
-  //WiFi.disconnect(true);
-  //WiFi.mode(WIFI_OFF);
-  
+
+   //Llamamos a la función para conectar a la wifi
+  conectarWiFi();
 }
 
 void loop(){
-  // Llamamos a la función para imprimir los datos en el LCD
-  mostrarReloj();
-  // Llamamos cada minuto a la función para enviar los datos a la base de datos
+  //Si se ha perdido la conexión wifi llamamos a la función para conectar de nuevo
+  if (WiFi.isConnected() == false){
+    conectarWiFi();
+    configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
+    }
+    
+  // Llamamos a la función para imprimir los datos en el LCD cada segundo
   unsigned long currentMillis = millis();
-  if (currentMillis - previosMillis > intervalo){
+  if (currentMillis - previosMillis > intervalo_1){
+    mostrarReloj();
+  }
+  // Llamamos cada minuto a la función para enviar los datos a la base de datos cada minuto
+  if (currentMillis - previosMillis > intervalo_0){
     previosMillis = currentMillis;
     enviarBD();
   }
-  // Actualizamos el reloj cada segundo
-  delay(1000);
   
 }
