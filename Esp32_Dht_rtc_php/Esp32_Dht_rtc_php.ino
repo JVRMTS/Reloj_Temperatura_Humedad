@@ -5,8 +5,8 @@
  * Sensor de Temperatura-Humedad DHT22.
  * Hora a traves de servidor NTP basado en el ejemplo SimpleTime de la libreria del ESP32
  * Conexión a base de datos Mysql mediante php por GET para realizar un registro
- * La retroiluminación del LCD se gradua mediante un potenciometro
- * 19/02/2021
+ * La retroiluminación del LCD se gradua mediante LDR
+ * 20/02/2021
  */
 
 #include <WiFi.h>
@@ -14,12 +14,13 @@
 #include <LiquidCrystal_I2C.h>
 #include <DHT.h>
 #include <Wire.h>
+#include <analogWrite.h>
 #define DHTTYPE DHT22   // Se define el tipo de DHT: DHT 22
 #define DHTPIN 27 // Se define el puerto al que conectamos el Sensor DHT: pin digital 27
 
 // Conectamos con la WiFi y sincronizamos el reloj con el servidor NTP
-const char* ssid       = "tu WiFi";
-const char* password   = "la contraseña de tu WiFi";
+const char* ssid       = "TU WIFI";
+const char* password   = "LA CONTRASEÑA DE TU WIFI";
 const char* ntpServer = "pool.ntp.org";// Servidor NTP para sincronizar el reloj
 const long  gmtOffset_sec = 3600; // Selección de la zona horaria GMT+1
 const int   daylightOffset_sec = 3600; // Configuración para el horario de verano
@@ -32,6 +33,11 @@ WiFiClient client; // Activamos el cliente web
 long previosMillis = 0;
 long intervalo_0= 60000;
 long intervalo_1 = 1000;
+
+const int pinLCD = 18;
+const int pinLDR = 32;
+int valorLDR;
+int valorLCD;
 
 LiquidCrystal_I2C lcd (0x27,20,4);
 DHT dht(DHTPIN, DHTTYPE);
@@ -129,7 +135,7 @@ void setup(){
   lcd.backlight(); // Se enciende la retroiluminación del lcd
   lcd.clear(); // Se borra la pantalla del lcd
   dht.begin(); // Se inicia la lectura del dht
-
+  pinMode(pinLCD,OUTPUT);
    //Llamamos a la función para conectar a la wifi
   conectarWiFi();
 }
@@ -151,5 +157,7 @@ void loop(){
     previosMillis = currentMillis;
     enviarBD();
   }
-  
-}
+  valorLDR = analogRead(pinLDR); // Leemos la variable del LDR
+  valorLCD = (valorLDR/8)-1; // Le damos el valor a la salida del LCD
+  analogWrite(pinLCD,valorLCD); // Escribimos en el pinLCD el valor
+  }
