@@ -6,7 +6,7 @@
  * Hora a traves de servidor NTP basado en el ejemplo SimpleTime de la libreria del ESP32
  * Conexión a base de datos Mysql mediante php por GET para realizar un registro
  * La retroiluminación del LCD se gradua mediante LDR
- * 20/02/2021
+ * 23/02/2021
  */
 
 #include <WiFi.h>
@@ -158,6 +158,6 @@ void loop(){
     enviarBD();
   }
   valorLDR = analogRead(pinLDR); // Leemos la variable del LDR
-  valorLCD = (valorLDR/8)-1; // Le damos el valor a la salida del LCD
+  valorLCD = valorLDR/8; // Le damos el valor a la salida del LCD
   analogWrite(pinLCD,valorLCD); // Escribimos en el pinLCD el valor
   }
