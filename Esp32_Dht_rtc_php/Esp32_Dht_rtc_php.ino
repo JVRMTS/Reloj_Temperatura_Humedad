@@ -6,7 +6,7 @@
  * Hora a traves de servidor NTP basado en el ejemplo SimpleTime de la libreria del ESP32
  * Conexión a base de datos Mysql mediante php por GET para realizar un registro
  * La retroiluminación del LCD se gradua mediante LDR
- * 23/02/2021
+ * 20/02/2021
  */
 
 #include <WiFi.h>
@@ -19,8 +19,8 @@
 #define DHTPIN 27 // Se define el puerto al que conectamos el Sensor DHT: pin digital 27
 
 // Conectamos con la WiFi y sincronizamos el reloj con el servidor NTP
-const char* ssid       = "TU WIFI";
-const char* password   = "LA CONTRASEÑA DE TU WIFI";
+const char* ssid       = "****";
+const char* password   = "****";
 const char* ntpServer = "pool.ntp.org";// Servidor NTP para sincronizar el reloj
 const long  gmtOffset_sec = 3600; // Selección de la zona horaria GMT+1
 const int   daylightOffset_sec = 3600; // Configuración para el horario de verano
@@ -36,8 +36,8 @@ long intervalo_1 = 1000;
 
 const int pinLCD = 18;
 const int pinLDR = 32;
-int valorLDR;
-int valorLCD;
+unsigned int valorLDR;
+unsigned int valorLCD;
 
 LiquidCrystal_I2C lcd (0x27,20,4);
 DHT dht(DHTPIN, DHTTYPE);
@@ -141,7 +141,7 @@ void setup(){
 }
 
 void loop(){
-  //Si se ha perdido la conexión wifi llamamos a la función para conectar de nuevo
+  //Si se ha perdido la conexión wifi llamamos a la función para conectar de nuevo y configuramos fecha y hora
   if (WiFi.isConnected() == false){
     conectarWiFi();
     configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
@@ -158,6 +158,10 @@ void loop(){
     enviarBD();
   }
   valorLDR = analogRead(pinLDR); // Leemos la variable del LDR
-  valorLCD = valorLDR/8; // Le damos el valor a la salida del LCD
+  if (valorLDR > 10){
+    valorLCD = valorLDR/8;// Le damos el valor a la salida del LCD
+    }else{
+    valorLCD = 10; // esto es para que nunca se apaque del todo el LCD
+    }
   analogWrite(pinLCD,valorLCD); // Escribimos en el pinLCD el valor
   }
