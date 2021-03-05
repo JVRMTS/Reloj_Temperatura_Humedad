@@ -52,13 +52,13 @@ void enviarBD(){
   
    Serial.println("Connecting...");
   if  (client.connect(server, 80)>0) {  // Conexion con el servidor
-    client.print F(("GET /sensores/iot.php?t=")); // Enviamos los datos por GET
+    client.print (F("GET /sensores/insertar.php?t=")); // Enviamos los datos por GET
     client.print(tp);
-    client.print F(("&h="));
+    client.print (F("&h="));
     client.print(h);
-    client.print F(("&st="));
+    client.print (F("&st="));
     client.print(hic);
-    client.print F(("&ub="));
+    client.print (F("&ub="));
     client.print(ub);
     client.println(F(" HTTP/1.0"));
     client.println(F("User-Agent: Arduino 1.0"));
