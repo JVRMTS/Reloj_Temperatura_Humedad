@@ -41,7 +41,7 @@ Creado por JMTS
                         while ($fila = $resultado->fetch_assoc()) {
                             printf ("<li>Temperatura: %s\n ºC </li> ", $fila["temperatura"]);
                             printf ("<li>Humedad: %s\n </li> ", $fila["humedad"]);
-                            printf ("<li>Sensacion Termica: %s\n ºC </li>", $fila["sen_termica"]);
+                            printf ("<li>Sensaci&oacuten Termica: %s\n ºC </li>", $fila["sen_termica"]);
                         }
 
                         /* liberar el conjunto de resultados */
@@ -65,38 +65,28 @@ Creado por JMTS
                     $consulta0 = "SELECT temperatura FROM datos WHERE temperatura=(SELECT MAX(temperatura) FROM datos WHERE ubicacion=1) LIMIT 1";
 					$consulta1 = "SELECT humedad FROM datos WHERE humedad=(SELECT MAX(humedad) FROM datos WHERE ubicacion=1) LIMIT 1";
                     $consulta2 = "SELECT sen_termica FROM datos WHERE sen_termica=(SELECT MAX(sen_termica) FROM datos WHERE ubicacion=1) LIMIT 1";
-					if ($resultado = $mysqli->query($consulta0)) {
-
-                        /* obtener un array asociativo */
-                        while ($fila = $resultado->fetch_assoc()) {
-                            printf ("<li>Temperatura: %s\n ºC </li> ", $fila["temperatura"]);
-                        }
-
-                        /* liberar el conjunto de resultados */
-                        $resultado->free();
-                    }
-					if ($resultado = $mysqli->query($consulta1)) {
-
-                        /* obtener un array asociativo */
-                        while ($fila = $resultado->fetch_assoc()) {
-                            printf ("<li>Humedad %s\n </li> ", $fila["humedad"]);
-                        }
-
-                        /* liberar el conjunto de resultados */
-                        $resultado->free();
-                    }
-					if ($resultado = $mysqli->query($consulta2)) {
-
-                        /* obtener un array asociativo */
-                        while ($fila = $resultado->fetch_assoc()) {
-                            printf ("<li>Sensaci&oacuten Termica: %s\n ºC </li> ", $fila["sen_termica"]);
-                        }
-
-                        /* liberar el conjunto de resultados */
-                        $resultado->free();
-                    }
-                    /* cerrar la conexión */
-                    //$mysqli->close();
+						
+					$resultado = mysqli_query($mysqli, $consulta0);
+                    $fila = mysqli_fetch_assoc($resultado);
+                    printf ("<li>Temperatura: %s\n ºC </li> ", $fila["temperatura"]);
+                    
+                    /* liberar el conjunto de resultados */
+                    $resultado->free();
+                    
+					$resultado = mysqli_query($mysqli, $consulta1);
+                    $fila = mysqli_fetch_assoc($resultado);
+                    printf ("<li>Humedad: %s\n </li> ", $fila["humedad"]);
+                    
+                    /* liberar el conjunto de resultados */
+                    $resultado->free();
+                    
+					$resultado = mysqli_query($mysqli, $consulta2);
+                    $fila = mysqli_fetch_assoc($resultado);
+                    printf ("<li>Sensaci&oacuten Termica: %s\n ºC </li> ", $fila["sen_termica"]);
+                    
+                    /* liberar el conjunto de resultados */
+                    $resultado->free();
+                    
                 ?>
                 </ul>
 				<h4>M&iacutenimas</h4>
@@ -112,38 +102,27 @@ Creado por JMTS
                     $consulta0 = "SELECT temperatura FROM datos WHERE temperatura=(SELECT MIN(temperatura) FROM datos WHERE ubicacion=1) LIMIT 1";
 					$consulta1 = "SELECT humedad FROM datos WHERE humedad=(SELECT MIN(humedad) FROM datos WHERE ubicacion=1) LIMIT 1";
                     $consulta2 = "SELECT sen_termica FROM datos WHERE sen_termica=(SELECT MIN(sen_termica) FROM datos WHERE ubicacion=1) LIMIT 1";
-					if ($resultado = $mysqli->query($consulta0)) {
-
-                        /* obtener un array asociativo */
-                        while ($fila = $resultado->fetch_assoc()) {
-                            printf ("<li>Temperatura: %s\n ºC </li> ", $fila["temperatura"]);
-                        }
-
-                        /* liberar el conjunto de resultados */
-                        $resultado->free();
-                    }
-                    if ($resultado = $mysqli->query($consulta1)) {
-
-                        /* obtener un array asociativo */
-                        while ($fila = $resultado->fetch_assoc()) {
-                            printf ("<li>Humedad: %s\n </li> ", $fila["humedad"]);
-                        }
-
-                        /* liberar el conjunto de resultados */
-                        $resultado->free();
-                    }
-					if ($resultado = $mysqli->query($consulta2)) {
-
-                        /* obtener un array asociativo */
-                        while ($fila = $resultado->fetch_assoc()) {
-                            printf ("<li>Sensaci&oacuten Termica: %s\n ºC </li> ", $fila["sen_termica"]);
-                        }
-
-                        /* liberar el conjunto de resultados */
-                        $resultado->free();
-                    }
-                    /* cerrar la conexión */
-                    //$mysqli->close();
+					
+					$resultado = mysqli_query($mysqli, $consulta0);
+                    $fila = mysqli_fetch_assoc($resultado);
+                    printf ("<li>Temperatura: %s\n ºC </li> ", $fila["temperatura"]);
+                    
+                    /* liberar el conjunto de resultados */
+                    $resultado->free();
+                    
+					$resultado = mysqli_query($mysqli, $consulta1);
+                    $fila = mysqli_fetch_assoc($resultado);
+                    printf ("<li>Humedad: %s\n </li> ", $fila["humedad"]);
+                    
+                    /* liberar el conjunto de resultados */
+                    $resultado->free();
+                    
+					$resultado = mysqli_query($mysqli, $consulta2);
+                    $fila = mysqli_fetch_assoc($resultado);
+                    printf ("<li>Sensaci&oacuten Termica: %s\n ºC </li> ", $fila["sen_termica"]);
+                    
+                    /* liberar el conjunto de resultados */
+                    $resultado->free();
                 ?>
                 </ul>
             </article>
@@ -192,38 +171,26 @@ Creado por JMTS
                     $consulta0 = "SELECT temperatura FROM datos WHERE temperatura=(SELECT MAX(temperatura) FROM datos WHERE ubicacion=2) LIMIT 1";
 					$consulta1 = "SELECT humedad FROM datos WHERE humedad=(SELECT MAX(humedad) FROM datos WHERE ubicacion=2) LIMIT 1";
                     $consulta2 = "SELECT sen_termica FROM datos WHERE sen_termica=(SELECT MAX(sen_termica) FROM datos WHERE ubicacion=2) LIMIT 1";
-					if ($resultado = $mysqli->query($consulta0)) {
-
-                        /* obtener un array asociativo */
-                        while ($fila = $resultado->fetch_assoc()) {
-                            printf ("<li>Temperatura: %s\n ºC </li> ", $fila["temperatura"]);
-                        }
-
-                        /* liberar el conjunto de resultados */
-                        $resultado->free();
-                    }
-					if ($resultado = $mysqli->query($consulta1)) {
-
-                        /* obtener un array asociativo */
-                        while ($fila = $resultado->fetch_assoc()) {
-                            printf ("<li>Humedad %s\n </li> ", $fila["humedad"]);
-                        }
-
-                        /* liberar el conjunto de resultados */
-                        $resultado->free();
-                    }
-					if ($resultado = $mysqli->query($consulta2)) {
-
-                        /* obtener un array asociativo */
-                        while ($fila = $resultado->fetch_assoc()) {
-                            printf ("<li>Sensaci&oacuten Termica: %s\n ºC </li> ", $fila["sen_termica"]);
-                        }
-
-                        /* liberar el conjunto de resultados */
-                        $resultado->free();
-                    }
-                    /* cerrar la conexión */
-                    //$mysqli->close();
+					$resultado = mysqli_query($mysqli, $consulta0);
+                    $fila = mysqli_fetch_assoc($resultado);
+                    printf ("<li>Temperatura: %s\n ºC </li> ", $fila["temperatura"]);
+                    
+                    /* liberar el conjunto de resultados */
+                    $resultado->free();
+                    
+					$resultado = mysqli_query($mysqli, $consulta1);
+                    $fila = mysqli_fetch_assoc($resultado);
+                    printf ("<li>Humedad: %s\n </li> ", $fila["humedad"]);
+                    
+                    /* liberar el conjunto de resultados */
+                    $resultado->free();
+                    
+					$resultado = mysqli_query($mysqli, $consulta2);
+                    $fila = mysqli_fetch_assoc($resultado);
+                    printf ("<li>Sensaci&oacuten Termica: %s\n ºC </li> ", $fila["sen_termica"]);
+                    
+                    /* liberar el conjunto de resultados */
+                    $resultado->free();
                 ?>
                 </ul>
 				<h4>M&iacutenimas</h4>
@@ -239,36 +206,27 @@ Creado por JMTS
                     $consulta0 = "SELECT temperatura FROM datos WHERE temperatura=(SELECT MIN(temperatura) FROM datos WHERE ubicacion=2) LIMIT 1";
 					$consulta1 = "SELECT humedad FROM datos WHERE humedad=(SELECT MIN(humedad) FROM datos WHERE ubicacion=2) LIMIT 1";
                     $consulta2 = "SELECT sen_termica FROM datos WHERE sen_termica=(SELECT MIN(sen_termica) FROM datos WHERE ubicacion=2) LIMIT 1";
-					if ($resultado = $mysqli->query($consulta0)) {
-
-                        /* obtener un array asociativo */
-                        while ($fila = $resultado->fetch_assoc()) {
-                            printf ("<li>Temperatura: %s\n ºC </li> ", $fila["temperatura"]);
-                        }
-
-                        /* liberar el conjunto de resultados */
-                        $resultado->free();
-                    }
-                    if ($resultado = $mysqli->query($consulta1)) {
-
-                        /* obtener un array asociativo */
-                        while ($fila = $resultado->fetch_assoc()) {
-                            printf ("<li>Humedad: %s\n </li> ", $fila["humedad"]);
-                        }
-
-                        /* liberar el conjunto de resultados */
-                        $resultado->free();
-                    }
-					if ($resultado = $mysqli->query($consulta2)) {
-
-                        /* obtener un array asociativo */
-                        while ($fila = $resultado->fetch_assoc()) {
-                            printf ("<li>Sensaci&oacuten Termica: %s\n ºC </li> ", $fila["sen_termica"]);
-                        }
-
-                        /* liberar el conjunto de resultados */
-                        $resultado->free();
-                    }
+					$resultado = mysqli_query($mysqli, $consulta0);
+                    $fila = mysqli_fetch_assoc($resultado);
+                    printf ("<li>Temperatura: %s\n ºC </li> ", $fila["temperatura"]);
+                    
+                    /* liberar el conjunto de resultados */
+                    $resultado->free();
+                    
+					$resultado = mysqli_query($mysqli, $consulta1);
+                    $fila = mysqli_fetch_assoc($resultado);
+                    printf ("<li>Humedad: %s\n </li> ", $fila["humedad"]);
+                    
+                    /* liberar el conjunto de resultados */
+                    $resultado->free();
+                    
+					$resultado = mysqli_query($mysqli, $consulta2);
+                    $fila = mysqli_fetch_assoc($resultado);
+                    printf ("<li>Sensaci&oacuten Termica: %s\n ºC </li> ", $fila["sen_termica"]);
+                    
+                    /* liberar el conjunto de resultados */
+                    $resultado->free();
+                    
                     /* cerrar la conexión */
                     $mysqli->close();
                 ?>

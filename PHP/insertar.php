@@ -8,8 +8,7 @@
 	$sen_termica=$_GET['st'];
 	$ubicacion=$_GET['ub'];
 	
-	//$valor = mysqli_real_escape_string($con, $_GET['valor']);
-    // Esta es la instrucción para insertar los valores
+	// Esta es la instrucción para insertar los valores
     $query = "INSERT INTO datos(temperatura,humedad,sen_termica,ubicacion)VALUES($temperatura,$humedad,$sen_termica,$ubicacion)";
     // Ejecutamos la instrucción
     mysqli_query($con, $query);

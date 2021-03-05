@@ -92,7 +92,7 @@ void enviarBD(){
   Serial.println("Conectando...");
   if  (client.connect(server, 80)>0) {  // Conexion con el servidor
   // Introducimos las variables por GET 
-    client.print F(("GET /sensores/iot.php?t=")); // Enviamos los datos por GET
+    client.print F(("GET /sensores/insertar.php?t=")); // Enviamos los datos por GET
     client.print(tp);
     client.print F(("&h="));
     client.print(h);
