@@ -6,7 +6,7 @@
  * Hora a traves de servidor NTP basado en el ejemplo SimpleTime de la libreria del ESP32
  * Conexión a base de datos Mysql mediante php por GET para realizar un registro
  * La retroiluminación del LCD se gradua mediante un potenciometro
- * 19/02/2021
+ * 05/03/2021
  */
  
 #include <WiFi.h>
@@ -87,12 +87,12 @@ void enviarBD(){
   double tp=dht.readTemperature();
   double h=dht.readHumidity();
   double hic=dht.computeHeatIndex(tp,h,false);
-  int ub = 2; // Ubicación (1-despacho) (2-salon) (3-pruebas)
+  int ub = 1; // Ubicación (1-despacho) (2-salon) (3-pruebas)
   // Nos conectamos a la base de datos y enviamos las medidas del sensor
   Serial.println("Conectando...");
   if  (client.connect(server, 80)>0) {  // Conexion con el servidor
   // Introducimos las variables por GET 
-    client.print F(("GET /sensores/iot.php?t=")); // Enviamos los datos por GET
+    client.print F(("GET /sensores/insertar.php?t=")); // Enviamos los datos por GET
     client.print(tp);
     client.print F(("&h="));
     client.print(h);
@@ -194,7 +194,7 @@ void setup() {
 void loop() {
   ArduinoOTA.handle();
 
-   //Si se ha perdido la conexión wifi llamamos a la función para conectar de nuevo
+  //Si se ha perdido la conexión wifi llamamos a la función para conectar de nuevo y configuramos fecha y hora
   if (WiFi.isConnected() == false){
     conectarWiFi();
     configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
