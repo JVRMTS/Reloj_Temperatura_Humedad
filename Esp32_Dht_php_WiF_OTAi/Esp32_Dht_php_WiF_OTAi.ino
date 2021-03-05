@@ -92,13 +92,13 @@ void enviarBD(){
   Serial.println("Conectando...");
   if  (client.connect(server, 80)>0) {  // Conexion con el servidor
   // Introducimos las variables por GET 
-    client.print F(("GET /sensores/insertar.php?t=")); // Enviamos los datos por GET
+    client.print (F("GET /sensores/insertar.php?t=")); // Enviamos los datos por GET
     client.print(tp);
-    client.print F(("&h="));
+    client.print (F("&h="));
     client.print(h);
-    client.print F(("&st="));
+    client.print (F("&st="));
     client.print(hic);
-    client.print F(("&ub="));
+    client.print (F("&ub="));
     client.print(ub);
     client.println(F(" HTTP/1.0"));
     client.println(F("User-Agent: Arduino 1.0"));
