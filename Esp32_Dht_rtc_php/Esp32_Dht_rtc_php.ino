@@ -6,7 +6,7 @@
  * Hora a traves de servidor NTP basado en el ejemplo SimpleTime de la libreria del ESP32
  * Conexión a base de datos Mysql mediante php por GET para realizar un registro
  * La retroiluminación del LCD se gradua mediante LDR
- * 05/03/2021
+ * 11/03/2021
  */
 
 #include <WiFi.h>
@@ -19,8 +19,8 @@
 #define DHTPIN 27 // Se define el puerto al que conectamos el Sensor DHT: pin digital 27
 
 // Conectamos con la WiFi y sincronizamos el reloj con el servidor NTP
-const char* ssid       = "****";
-const char* password   = "****";
+const char* ssid       = "JMTS";
+const char* password   = "JAVIER276MTS";
 const char* ntpServer = "pool.ntp.org";// Servidor NTP para sincronizar el reloj
 const long  gmtOffset_sec = 3600; // Selección de la zona horaria GMT+1
 const int   daylightOffset_sec = 3600; // Configuración para el horario de verano
@@ -33,6 +33,7 @@ WiFiClient client; // Activamos el cliente web
 long previosMillis = 0;
 long intervalo_0= 60000;
 long intervalo_1 = 1000;
+long intervalo_2 = 2000;
 
 const int pinLCD = 18;
 const int pinLDR = 32;
@@ -152,16 +153,20 @@ void loop(){
   if (currentMillis - previosMillis > intervalo_1){
     mostrarReloj();
   }
+  // Comprobamos cada dos segundos la intensidad de la luz
+  if (currentMillis - previosMillis > intervalo_2){
+    valorLDR = analogRead(pinLDR); // Leemos la variable del LDR
+    if (valorLDR > 10){
+      valorLCD = valorLDR/8;// Le damos el valor a la salida del LCD
+      }else{
+      valorLCD = 10; // esto es para que nunca se apaque del todo el LCD
+      }
+      analogWrite(pinLCD,valorLCD); // Escribimos en el pinLCD el valor
+    }
   // Llamamos cada minuto a la función para enviar los datos a la base de datos cada minuto
   if (currentMillis - previosMillis > intervalo_0){
     previosMillis = currentMillis;
     enviarBD();
   }
-  valorLDR = analogRead(pinLDR); // Leemos la variable del LDR
-  if (valorLDR > 10){
-    valorLCD = valorLDR/8;// Le damos el valor a la salida del LCD
-    }else{
-    valorLCD = 10; // esto es para que nunca se apaque del todo el LCD
-    }
-  analogWrite(pinLCD,valorLCD); // Escribimos en el pinLCD el valor
-  }
+
+}
