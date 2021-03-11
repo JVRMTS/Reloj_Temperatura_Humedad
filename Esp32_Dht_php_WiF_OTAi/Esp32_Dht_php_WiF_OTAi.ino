@@ -6,7 +6,7 @@
  * Hora a traves de servidor NTP basado en el ejemplo SimpleTime de la libreria del ESP32
  * Conexión a base de datos Mysql mediante php por GET para realizar un registro
  * La retroiluminación del LCD se gradua mediante un potenciometro
- * 07/02/2021
+ * 05/03/2021
  */
  
 #include <WiFi.h>
@@ -34,7 +34,8 @@ WiFiClient client; // Activamos el cliente web
 
 // Iniciamos los contadores para insertar en la base de datos
 long previosMillis = 0;
-long intervalo = 59000;
+long intervalo_0= 60000;
+long intervalo_1 = 1000;
 
 LiquidCrystal_I2C lcd (0x27,20,4);
 DHT dht(DHTPIN, DHTTYPE);
@@ -47,29 +48,8 @@ void fecha(){
     return;
     }
  // Conseguir el día de la semana corto en castellano 
-  byte diaSemana = timeinfo.tm_wday;
-  char* diaS;
-  if (diaSemana ==0){
-    diaS="Dom";
-    }
-  else if (diaSemana ==1){
-    diaS="Lun";
-    }
-  else if (diaSemana ==2){
-    diaS="Mar";
-    }
-  else if (diaSemana ==3){
-    diaS="Mie";
-    }
-  else if (diaSemana ==4){
-    diaS="Jue";
-    }
-  else if (diaSemana ==5){
-    diaS="Vie";
-    }
-  else{
-    diaS="Sab";
-    }
+    String diaSemana[] = {"Dom","Lun","Mar","Mie","Jue","Vie","Sab"};
+    String diaS = diaSemana[timeinfo.tm_wday];
     
     lcd.print(diaS);
     lcd.print(&timeinfo, " %d/%m/%Y %H:%M");
@@ -107,18 +87,18 @@ void enviarBD(){
   double tp=dht.readTemperature();
   double h=dht.readHumidity();
   double hic=dht.computeHeatIndex(tp,h,false);
-  int ub = 2; // Ubicación (1-despacho) (2-salon) (3-pruebas)
+  int ub = 1; // Ubicación (1-despacho) (2-salon) (3-pruebas)
   // Nos conectamos a la base de datos y enviamos las medidas del sensor
   Serial.println("Conectando...");
   if  (client.connect(server, 80)>0) {  // Conexion con el servidor
   // Introducimos las variables por GET 
-    client.print F(("GET /sensores/iot.php?t=")); // Enviamos los datos por GET
+    client.print (F("GET /sensores/insertar.php?t=")); // Enviamos los datos por GET
     client.print(tp);
-    client.print F(("&h="));
+    client.print (F("&h="));
     client.print(h);
-    client.print F(("&st="));
+    client.print (F("&st="));
     client.print(hic);
-    client.print F(("&ub="));
+    client.print (F("&ub="));
     client.print(ub);
     client.println(F(" HTTP/1.0"));
     client.println(F("User-Agent: Arduino 1.0"));
@@ -214,22 +194,20 @@ void setup() {
 void loop() {
   ArduinoOTA.handle();
 
-   //Si se ha perdido la conexión wifi llamamos a la función para conectar de nuevo
+  //Si se ha perdido la conexión wifi llamamos a la función para conectar de nuevo y configuramos fecha y hora
   if (WiFi.isConnected() == false){
     conectarWiFi();
     configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
     }
     
-  // Llamamos a la función para imprimir los datos en el LCD
-  mostrarReloj();
-  // Llamamos cada minuto a la función para enviar los datos a la base de datos
+  // Llamamos a la función para imprimir los datos en el LCD cada segundo
   unsigned long currentMillis = millis();
-  if (currentMillis - previosMillis > intervalo){
+  if (currentMillis - previosMillis > intervalo_1){
+    mostrarReloj();
+  }
+  // Llamamos cada minuto a la función para enviar los datos a la base de datos cada minuto
+  if (currentMillis - previosMillis > intervalo_0){
     previosMillis = currentMillis;
     enviarBD();
-    //WiFi.disconnect(true);
   }
-
-  // Actualizamos el reloj cada segundo
-  delay(1000);
 }
