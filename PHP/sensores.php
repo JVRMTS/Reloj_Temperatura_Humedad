@@ -25,12 +25,14 @@ Creado por JMTS
         </header>
         <section>
 			<article>
-			<?php
-			echo el_tiempo();
-			?>
+				<div class="container" h-100>
+					<?php
+						echo el_tiempo();
+					?>
+				</div>
 			</article>
             <article>
-			<div class="container" h-100>      
+			<div class="container" h-100>
 				<div class="row justify-content-center">
 				<div class="row">
 					<div class="col-md-6">
@@ -40,22 +42,22 @@ Creado por JMTS
 						<h4 align="center">Temperatura actual</h4>
 						<ul class="list-unstyled" align="center">
 						<li>
-						<?php
-							echo consulta0();
-						?>
+							<?php
+								echo consulta0();
+							?>
 						</li>
 						</strong>
 						<h4 align="center">M&aacuteximas</h4>
 						<li>
-						<?php
-							echo consulta1();
-						?>
+							<?php
+								echo consulta1();
+							?>
 						</li>
 						<h4 align="center">M&iacutenimas</h4>
 						<li>
-						<?php
-							echo consulta2();
-						?>
+							<?php
+								echo consulta2();
+							?>
 						</li>
 						</ul>
 					</div>
@@ -66,22 +68,22 @@ Creado por JMTS
 						<h4 align="center">Temperatura actual</h4>
 						<ul class="list-unstyled" align="center">
 						<li>
-						<?php
-							echo consulta3();
-						?>	
+							<?php
+								echo consulta3();
+							?>	
 						</li>
 						</strong>
 						<h4 align="center">M&aacuteximas</h4>
 						<li>
-						<?php
-							echo consulta4();
-						?>
+							<?php
+								echo consulta4();
+							?>
 						</li>
 						<h4 align="center">M&iacutenimas</h4>
 						<li>
-						<?php
-							echo consulta5();
-						?>
+							<?php
+								echo consulta5();
+							?>
 						</li>
 						</ul>
 					</div>
