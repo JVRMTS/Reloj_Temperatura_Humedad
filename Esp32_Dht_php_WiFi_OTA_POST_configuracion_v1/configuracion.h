@@ -29,7 +29,7 @@ char* passwordOTA = "****"; //pon la contraseña que desees para la actualizaci�
 
                     //Configuración del Servidor Web
 String dominio = "192.168.1.4"; // Pon el dominio o dirección IP del servidor
-String url = "http://" + dominio + "/sensores/insertar_post.php"; //Dirección web del servidor
+String url = "http://" + dominio + "/config/insertar_post.php"; //Dirección web del servidor
 
                     // Tipo de LCD y Dirección I2C LCD
 int col= 20;
