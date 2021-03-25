@@ -111,7 +111,7 @@ function consulta3(){
 		while ($fila = $resultado->fetch_assoc()) {
 			printf ("<li>Temperatura: %s\n ºC</li> ", $fila["temperatura"]);
 			printf ("<li>Humedad: %s\n </li> ", $fila["humedad"]);
-			printf ("<li>Sensacion T&eacutermica: %s\n ºC</li>", $fila["sen_termica"]);
+			printf ("<li>Sensaci&oacuten T&eacutermica: %s\n ºC</li>", $fila["sen_termica"]);
 		}
 
 		/* liberar el conjunto de resultados */
