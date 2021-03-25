@@ -1,12 +1,11 @@
-<!--
-Creado por JMTS
-11 de marzo de 2021
--->
+    // 25/03/2021
+    // @JMTS - www.jmts.es
 <?php
+include 'config/config.php';
 function consulta0(){
-	include 'config.php';
-    $mysqli = $con;
-
+	
+    
+	$mysqli = conectar();
     /* verificar la conexión */
     if ($mysqli->connect_errno) {
     printf("Conexión fallida: %s\n", $mysqli->connect_error);
@@ -30,8 +29,7 @@ function consulta0(){
     
 }
 function consulta1(){
-	include 'config.php';
-	$mysqli = $con;
+	$mysqli = conectar();
     /* verificar la conexión */
     if ($mysqli->connect_errno) {
         printf("Conexión fallida: %s\n", $mysqli->connect_error);
@@ -64,8 +62,7 @@ function consulta1(){
     $resultado->free();
 }
 function consulta2(){
-	include 'config.php';
-	$mysqli = $con;
+	$mysqli = conectar();
 	/* verificar la conexión */
 	if ($mysqli->connect_errno) {
 		printf("Conexión fallida: %s\n", $mysqli->connect_error);
@@ -98,8 +95,7 @@ function consulta2(){
 	$resultado->free();
 }
 function consulta3(){
-	include 'config.php';
-	$mysqli = $con;
+	$mysqli = conectar();
 
 	/* verificar la conexión */
 	if ($mysqli->connect_errno) {
@@ -123,8 +119,7 @@ function consulta3(){
                     }
 }
 function consulta4(){
-	include 'config.php';
-	$mysqli = $con;
+	$mysqli = conectar();
 	/* verificar la conexión */
 	if ($mysqli->connect_errno) {
 		printf("Conexión fallida: %s\n", $mysqli->connect_error);
@@ -156,8 +151,7 @@ function consulta4(){
 	$resultado->free();
 }
 function consulta5(){
-	include 'config.php';
-	$mysqli = $con;
+	$mysqli = conectar();
 	/* verificar la conexión */
 	if ($mysqli->connect_errno) {
 		printf("Conexión fallida: %s\n", $mysqli->connect_error);
@@ -191,28 +185,29 @@ function consulta5(){
 	/* cerrar la conexión */
 	$mysqli->close();
 }
-// consulta a la api de OPENWEATERMAP para consultar los datos del tiempo de mi localidad
 function el_tiempo(){
-	$html = file_get_contents('https://api.openweathermap.org/data/2.5/weather?zip=30169,es&lang=es&units=metric&appid=*****');
+	$html = file_get_contents('****'); // en los asteriscos pon la dirección y contraseña de tu api
 	$json = json_decode($html,false);
 	
 	$ciudad = $json->name;
-	echo "<h2 class='text-center title'>".$ciudad."</h2>";
-	echo '<p class="lead text-center">';			
+	$descripcion = $json->weather[0]->description;
 	$icono = $json->weather[0]->icon;
 	$icono1 = "<img src= http://openweathermap.org/img/wn/".$icono."@2x.png>";
+	$nubes = $json->clouds->all;
+	$temp = $json->main->temp;
+	$sen_termica = $json->main->feels_like;
+	$humedad = $json->main->humidity;
+	$vel_viento = $json->wind->speed;
+	
+	echo "<h2 class='text-center title'>".$ciudad."</h2>";
+	echo '<p class="lead text-center">';
+	echo "<strong>- ",$descripcion, " -</br></strong>";	
 	echo $icono1,"</br>";
 	echo "<strong>Nubosidad: </strong>";
-	$descripcion = $json->weather[0]->description;
-	echo $descripcion, "</br>";
-
-	$temp = $json->main->temp;
+	echo $nubes,"% </br>";
 	echo "<strong>Temperatura actual: </strong>", $temp, " ºC</br>";
-	$sen_termica = $json->main->feels_like;
 	echo "<strong>Sensaci&oacuten T&eacutermica: </strong>",$sen_termica , " ºC</br>";
-	$humedad = $json->main->humidity;
 	echo "<strong>Humedad: </strong>",$humedad, " %</br>";
-	$vel_viento = $json->wind->speed;
 	echo "<strong>Velocidad del viento: </strong>",$vel_viento, " m/s</br>";
 	echo "</p>";
 }
