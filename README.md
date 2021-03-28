@@ -9,3 +9,4 @@ Se adjuntan archivos de publicación en la web.
 Sientete libre de utilizar todo el contenido que está en el repositorio y si crees que lo puedes mejorar no dudes en hacerlo y compartirlo.
 
 La web esta activa y funcionando en http://pruebas.jmts.es puedes pasar a verla.
+El archivo STL de la caja esta publicado en https://www.thingiverse.com/thing:4808951
