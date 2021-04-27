@@ -1,42 +1,50 @@
 /* Fichero de configuración para el reloj con envío de datos por POST y actualización via OTA
- * Creado el 24/3/2021
+ * Creado el 24/03/2021
  * por @JMTS
-*/ 
+*/
 
-                    // Configuración de la Ubicación
-                    // Ubicación (1-despacho) (2-salon) (3-pruebas)
-                    // tambien da nombre al puerto de actualizacion via OTA
-byte ub = 1;
+#define DHTTYPE DHT22 // Se define el tipo de DHT: DHT 22
+#define DHTPIN 27     // Se define el puerto al que conectamos el Sensor DHT: pin digital 27
 
-char* ubicacion(){
-char* ubic;
-  if (ub == 1){
+// Configuración de la Ubicación
+// tambien da nombre al puerto de actualizacion via OTA
+byte ub = 1; // Ubicación (1-despacho) (2-salon) (3-pruebas)
+
+char *ubicacion()
+{
+  char *ubic;
+  if (ub == 1)
+  {
     ubic = "Despacho";
-  }else if (ub == 2){
+  }
+  else if (ub == 2)
+  {
     ubic = "Salon";
-  }else if (ub == 3){
-    ubic = "Pruebas";  
+  }
+  else if (ub == 3)
+  {
+    ubic = "Pruebas";
   }
   return ubic;
 }
 
-                    //Configuración de la WiFi
-const char* ssid = "****"; // el nombre de tu wifi
-const char* password = "****"; // pon la contraseña de tu wifi 
+//Configuración de la WiFi
+const char *ssid = "****";
+const char *password = "****";
 
-                    //Password para la ota
-char* passwordOTA = "****"; //pon la contraseña que desees para la actualización via OTA
+//Password para la actualización via OTA
+char *passwordOTA = "JavierMt5";
 
-                    //Configuración del Servidor Web
-String dominio = "192.168.1.4"; // Pon el dominio o dirección IP del servidor
-String url = "http://" + dominio + "/config/insertar_post.php"; //Dirección web del servidor
+//Configuración del Servidor Web
+String dominio = "pruebas.jmts.es";
+String url = "https://" + dominio + "/config/insertar_post.php"; //Dirección web del servidor
 
-                    // Tipo de LCD y Dirección I2C LCD
-int col= 20;
-int fil= 4;
-byte dir = 0x27;
+// Tipo de LCD y Dirección I2C LCD
+int col = 20;    //Columnas del LCD
+int fil = 4;     //Filas del LCD
+byte dir = 0x27; //Dirección I2C del LCD
 
-                    // Asignamos los pines de la iluminación del LCD y del LDR y declaramos sus variables
+// Asignamos los pines de la iluminación del LCD y del LDR y declaramos sus variables
 const int pinLCD = 18;
 const int pinLDR = 32;
 unsigned int valorLDR;

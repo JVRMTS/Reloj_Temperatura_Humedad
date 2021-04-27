@@ -1,0 +1,5 @@
+{
+    "configuration": "PSRAM=disabled,PartitionScheme=default,CPUFreq=240,FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=921600,DebugLevel=none",
+    "board": "esp32:esp32:esp32",
+    "sketch": "Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino"
+}
