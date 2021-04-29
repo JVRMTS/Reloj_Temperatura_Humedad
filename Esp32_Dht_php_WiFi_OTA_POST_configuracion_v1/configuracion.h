@@ -33,7 +33,7 @@ const char *ssid = "****";
 const char *password = "****";
 
 //Password para la actualización via OTA
-char *passwordOTA = "JavierMt5";
+char *passwordOTA = "*****";
 
 //Configuración del Servidor Web
 String dominio = "pruebas.jmts.es";
