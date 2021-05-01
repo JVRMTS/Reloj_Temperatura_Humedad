@@ -44,4 +44,3 @@ ArduinoOTA.begin();
 Serial.println("Ready");
 Serial.print("IP address: ");
 Serial.println(WiFi.localIP());
-}
