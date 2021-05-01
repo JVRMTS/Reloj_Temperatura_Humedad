@@ -55,11 +55,11 @@ void loop()
   valorLDR = analogRead(pinLDR); // Leemos la variable del LDR
   if (valorLDR <= 5)
   {
-    valorLCD = 5; // Le damos el valor a la salida del LCD
+    valorLCD = 5; // esto es para que nunca se apaque del todo el LCD
   }
   else
   {
-    valorLCD = valorLDR / 8; // esto es para que nunca se apaque del todo el LCD
+    valorLCD = valorLDR / 8; // Le damos el valor a la salida del LCD
   }
   analogWrite(pinLCD, valorLCD); // Escribimos en el pinLCD el valor
 
@@ -67,7 +67,7 @@ void loop()
   if (WiFi.isConnected() == false)
   {
     conectarWiFi();
-    configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
+    configTime(gmtOffset_sec, daylightOffset_sec, ntpServer); // Volvemos a configurar la hora
   }
 
   // Llamamos a la función para imprimir los datos en el LCD cada segundo
