@@ -40,7 +40,7 @@ const char *password = "****";
 char *passwordOTA = "*****";
 
 //Configuración del Servidor Web
-String dominio = "pruebas.jmts.es";
+String dominio = "*****"; // Dominio donde está alojada la web.
 String url = "https://" + dominio + "/config/insertar_post.php"; //Dirección web del servidor
 
 // Tipo de LCD y Dirección I2C LCD
