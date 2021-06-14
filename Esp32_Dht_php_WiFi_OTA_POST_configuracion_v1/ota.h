@@ -1,7 +1,7 @@
 /*
  * 14/06/2021
 */
-
+void actualizacionOTA(){
 // ACTUALIZACIONES VIA OTA
 // Establecemos el nombre del dispositivo por la ubicación
 ArduinoOTA.setHostname(ubicacion());
@@ -44,3 +44,4 @@ ArduinoOTA.begin();
 Serial.println("Ready");
 Serial.print("IP address: ");
 Serial.println(WiFi.localIP());
+}
