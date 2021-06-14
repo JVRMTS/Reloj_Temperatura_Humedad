@@ -7,18 +7,20 @@
  * Conexión a base de datos Mysql mediante php con el método POST para realizar un registro
  * La retroiluminación del LCD se gradua mediante LDR
  * Actualización del frimware via OTA con contraseña basado en el ejemplo ArduinoOTA
- * 24/03/2021
+ * 14/06/2021
  */
 #include "incluir.h"
 #include "configuracion.h"
 #include "reloj.h"
 #include "conexionWiFi.h"
 #include "baseDatos.h"
+#include "ota.h"
 
 // Iniciamos los contadores para insertar en la base de datos y actualizar el reloj
-long previosMillis = 0;
-long intervalo_0 = 59999;
-long intervalo_1 = 1000;
+unsigned long previosMillis_0;
+unsigned long previosMillis_1;
+unsigned long intervalo_0 = 60000;
+unsigned long intervalo_1 = 1000;
 
 void setup()
 {
@@ -30,57 +32,47 @@ void setup()
 
   // Conexion a la wifi y sincronización del reloj NTP
   conectarWiFi();
-  Serial.println("Arrancando");
-  WiFi.mode(WIFI_STA);
-  WiFi.begin(ssid, password);
-  while (WiFi.waitForConnectResult() != WL_CONNECTED)
-  {
-    Serial.println("Conexion fallida! Reseteando...");
-    delay(5000);
-    ESP.restart();
-    configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
-    // Establecemos el nombre del dispositivo
-  }
-  configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
 
-// incluimos la actualización via OTA
-#include "ota.h"
+  // Configuramos la actualización via OTA
+  actualizacionOTA();
 }
-void loop()
-{
-
-  ArduinoOTA.handle(); //Llamamos a la actualización via OTA
-
-  // Comprobamos la intensidad de la luz
-  valorLDR = analogRead(pinLDR); // Leemos la variable del LDR
-  if (valorLDR <= 5)
+  void loop()
   {
-    valorLCD = 5; // esto es para que nunca se apaque del todo el LCD
-  }
-  else
-  {
-    valorLCD = valorLDR / 8; // Le damos el valor a la salida del LCD
-  }
-  analogWrite(pinLCD, valorLCD); // Escribimos en el pinLCD el valor
+    
+    //Si se ha perdido la conexión wifi llamamos a la función para conectar de nuevo y configuramos fecha y hora
+    if (WiFi.isConnected() == false)
+    {
+      conectarWiFi();
+      configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
+    }
 
-  //Si se ha perdido la conexión wifi llamamos a la función para conectar de nuevo y configuramos fecha y hora
-  if (WiFi.isConnected() == false)
-  {
-    conectarWiFi();
-    configTime(gmtOffset_sec, daylightOffset_sec, ntpServer); // Volvemos a configurar la hora
-  }
+    // Llamamos a la función para imprimir los datos en el LCD cada segundo
+    unsigned long currentMillis = millis();
+    if ((unsigned long) (currentMillis - previosMillis_1) >= intervalo_1)
+    {
+      mostrarTemperatura();
+      previosMillis_1 = millis();
+    }
 
-  // Llamamos a la función para imprimir los datos en el LCD cada segundo
-  unsigned long currentMillis = millis();
-  if (currentMillis - previosMillis > intervalo_1)
-  {
-    mostrarTemperatura();
-  }
+    // Llamamos, cada minuto, a la función para insertar los datos en la base de datos
+    if ((unsigned long) (currentMillis - previosMillis_0) >= intervalo_0)
+    {
+      enviarBD();
+      previosMillis_0 = millis();
+    }
+    
+    // Comprobamos la intensidad de la luz
+    valorLDR = analogRead(pinLDR); // Leemos la variable del LDR
+    if (valorLDR >= 5)
+    {
+      valorLCD = valorLDR / 8; // Le damos el valor a la salida del LCD
+    }
+    else
+    {
+      valorLCD = 5; // esto es para que nunca se apaque del todo el LCD
+    }
+    analogWrite(pinLCD, valorLCD); // Escribimos en el pinLCD el valor
+    
+    ArduinoOTA.handle(); //Llamamos a la actualización via OTA
 
-  // Llamamos cada minuto a la función para insertar los datos en la base de datos
-  if (currentMillis - previosMillis > intervalo_0)
-  {
-    previosMillis = currentMillis;
-    enviarBD();
   }
-}
