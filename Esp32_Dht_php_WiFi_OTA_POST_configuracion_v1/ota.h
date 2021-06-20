@@ -16,7 +16,7 @@ ArduinoOTA
       else // U_SPIFFS
         type = "filesystem";
 
-      // NOTE: if updating SPIFFS this would be the place to unmount SPIFFS using SPIFFS.end()
+      // NOTA: si actualiza SPIFFS, este sería el lugar para desmontar SPIFFS usando SPIFFS.end ()
       Serial.println("Start updating " + type);
     })
     .onEnd([]() {
