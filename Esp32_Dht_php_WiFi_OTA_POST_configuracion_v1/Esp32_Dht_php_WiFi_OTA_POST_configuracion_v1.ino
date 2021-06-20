@@ -7,7 +7,7 @@
  * Conexión a base de datos Mysql mediante php con el método POST para realizar un registro
  * La retroiluminación del LCD se gradua mediante LDR
  * Actualización del frimware via OTA con contraseña basado en el ejemplo ArduinoOTA
- * 14/06/2021
+ * 20/06/2021
  */
 #include "incluir.h"
 #include "configuracion.h"
@@ -63,13 +63,12 @@ void setup()
     
     // Comprobamos la intensidad de la luz
     valorLDR = analogRead(pinLDR); // Leemos la variable del LDR
-    if (valorLDR >= 5)
-    {
-      valorLCD = valorLDR / 8; // Le damos el valor a la salida del LCD
-    }
-    else
+    unsigned int x = valorLDR / 8;
+    if(x <6)
     {
       valorLCD = 5; // esto es para que nunca se apaque del todo el LCD
+    }else{
+      valorLCD = x; // Asignamos el valor de iluminación del LCD en base al valor del LDR
     }
     analogWrite(pinLCD, valorLCD); // Escribimos en el pinLCD el valor
     
