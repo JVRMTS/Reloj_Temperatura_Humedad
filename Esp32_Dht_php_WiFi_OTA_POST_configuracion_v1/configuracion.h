@@ -6,7 +6,7 @@
 #define DHTTYPE DHT22 // Se define el tipo de DHT: DHT 22
 #define DHTPIN 27     // Se define el puerto al que conectamos el Sensor DHT: pin digital 27
 // Confinguramos el servidor NTP
-const char *ntpServer = "pool.ntp.org"; // Servidor NTP para sincronizar el reloj
+const char* ntpServer = "pool.ntp.org"; // Servidor NTP para sincronizar el reloj
 const long gmtOffset_sec = 3600;        // Selección de la zona horaria GMT+1
 const int daylightOffset_sec = 3600;    // Configuración para el horario de verano
 
