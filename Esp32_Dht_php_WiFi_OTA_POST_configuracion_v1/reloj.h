@@ -11,6 +11,7 @@ DHT dht(DHTPIN, DHTTYPE);             // Creamos el objeto DHT y lo configuramos
 // Función fecha para mostrarla en el LCD
 void fecha()
 {
+  configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
   struct tm timeinfo;
   if (!getLocalTime(&timeinfo))
   {
