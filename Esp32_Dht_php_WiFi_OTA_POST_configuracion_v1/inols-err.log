@@ -1,0 +1,895 @@
+
+
+
+
+
+
+
+Started logging.
+11:40:47.845946 Language server launched with arguments:
+11:40:47.845946   arg[0] = c:\Program Files\Arduino IDE\resources\app\lib\backend\resources\arduino-language-server.exe
+11:40:47.845946   arg[1] = -clangd
+11:40:47.845946   arg[2] = c:\Program Files\Arduino IDE\resources\app\lib\backend\resources\clangd.exe
+11:40:47.845946   arg[3] = -cli-daemon-addr
+11:40:47.845946   arg[4] = localhost:50929
+11:40:47.845946   arg[5] = -cli-daemon-instance
+11:40:47.845946   arg[6] = 1
+11:40:47.846946   arg[7] = -fqbn
+11:40:47.846946   arg[8] = esp32:esp32:esp32:UploadSpeed=921600,CPUFreq=240,FlashFreq=80,FlashMode=qio,FlashSize=4M,PartitionScheme=min_spiffs,DebugLevel=none,PSRAM=disabled,LoopCore=1,EventsCore=1,EraseFlash=none,JTAGAdapter=default
+11:40:47.862724   arg[9] = -skip-libraries-discovery-on-rebuild
+11:40:47.862724   arg[10] = -board-name
+11:40:47.862724   arg[11] = "ESP32 Dev Module"
+11:40:47.862724   arg[12] = -no-real-time-diagnostics
+11:40:47.862724   arg[13] = -log
+11:40:47.862724   arg[14] = -logpath
+11:40:47.862724   arg[15] = c:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1
+11:40:47.865834 logging to c:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\inols.log
+11:40:47.882537 [97mLS: : Initial board configuration: esp32:esp32:esp32:UploadSpeed=921600,CPUFreq=240,FlashFreq=80,FlashMode=qio,FlashSize=4M,PartitionScheme=min_spiffs,DebugLevel=none,PSRAM=disabled,LoopCore=1,EventsCore=1,EraseFlash=none,JTAGAdapter=default[0m
+11:40:47.882537 [97mLS: : arduino-language-server.exe Version: 0.7.4 Commit: d620b0b Date: 2023-01-11T15:42:52Z[0m
+11:40:47.882537 [97mLS: : Language server build path: C:\Users\User\AppData\Local\Temp\arduino-language-server1519904251[0m
+11:40:47.882537 [97mLS: : Language server build sketch root: C:\Users\User\AppData\Local\Temp\arduino-language-server1519904251\sketch[0m
+11:40:47.882537 [97mLS: : Language server FULL build path: C:\Users\User\AppData\Local\Temp\arduino-language-server2347616119[0m
+11:40:47.884290 IN Elapsed: 1.7529ms
+11:40:47.884290 [92mIDE --> LS REQU initialize 0[0m
+11:40:47.885648 [92m                initialize 0: [93mwrite-locked[0m[0m
+11:40:47.885648 listen tcp 127.0.0.1:6060: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+11:40:47.887456 [92m                initialize 0: [93mwrite-unlocked[0m[0m
+11:40:47.887456 [92m                initialize 0: initialization parameters: {"capabilities":{"textDocumentSync":{"openClose":true,"change":2,"save":{"includeText":true}},"completionProvider":{"triggerCharacters":[".","\u003c","\u003e",":","\"","/"],"allCommitCharacters":[" ","\t","(",")","[","]","{","}","\u003c","\u003e",":",";",",","+","-","/","*","%","^","\u0026","#","?",".","=","\"","'","|"],"completionItem":{}},"hoverProvider":{},"signatureHelpProvider":{"triggerCharacters":["(",","]},"definitionProvider":{},"documentHighlightProvider":{},"documentSymbolProvider":{},"codeActionProvider":{"codeActionKinds":["quickfix","refactor","info"]},"documentFormattingProvider":{},"documentRangeFormattingProvider":{},"documentOnTypeFormattingProvider":{"firstTriggerCharacter":"\n"},"renameProvider":{},"executeCommandProvider":{"commands":["clangd.applyFix","clangd.applyTweak"]},"workspaceSymbolProvider":{}},"serverInfo":{"name":"arduino-language-server","version":"0.7.4"}}[0m
+11:40:47.887456 [32mIDE <-- LS RESP initialize 0[0m
+11:40:47.887456 OUT Elapsed: 0s
+11:40:47.887456 [96mINIT --- : initializing workbench: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1[0m
+11:40:47.887456 [96mINIT --- : [93mread-locked[0m[0m
+11:40:47.887456 [96mINIT --- : [93mread-unlocked[0m[0m
+11:40:47.929185 IN Elapsed: 41.7298ms
+11:40:47.929185 [92mIDE --> LS NOTIF initialized[0m
+11:40:47.929185 [92m                 initialized: Notification is not propagated to clangd[0m
+11:40:47.929185 IN Elapsed: 0s
+11:40:47.929185 [92mIDE --> LS NOTIF textDocument/didOpen[0m
+11:40:47.930195 [92m                 textDocument/didOpen: [93mwrite-locked[0m[0m
+11:40:47.930195 [92m                 textDocument/didOpen: (throttled: waiting for clangd)[0m
+11:40:47.930195 [92m                 textDocument/didOpen: [93munlocked (waiting clangd)[0m[0m
+11:40:48.206833 [96mINIT --- : Running build with: {
+  "instance": {
+    "id": 1
+  },
+  "fqbn": "esp32:esp32:esp32:UploadSpeed=921600,CPUFreq=240,FlashFreq=80,FlashMode=qio,FlashSize=4M,PartitionScheme=min_spiffs,DebugLevel=none,PSRAM=disabled,LoopCore=1,EventsCore=1,EraseFlash=none,JTAGAdapter=default",
+  "sketch_path": "C:\\Users\\User\\OneDrive - @JMTS\\Documentos\\GitHub\\Reloj_Temperatura_Humedad\\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1",
+  "build_path": "C:\\Users\\User\\AppData\\Local\\Temp\\arduino-language-server2347616119",
+  "verbose": true,
+  "create_compilation_database_only": true
+}[0m
+11:42:34.299582 [96mINIT --- : Compile successful![0m
+11:42:34.306049 [96mINIT --- : Updated 'libraries.cache'. Copied: C:\Users\User\AppData\Local\Temp\arduino-language-server2347616119\libraries.cache to C:\Users\User\AppData\Local\Temp\arduino-language-server1519904251\libraries.cache[0m
+11:42:34.306049 [96mINIT --- : [93mread-locked[0m[0m
+11:42:34.306049 [96mINIT --- : [93mread-unlocked[0m[0m
+11:42:34.630563 [96mINIT --- : Running build with: {
+  "instance": {
+    "id": 1
+  },
+  "fqbn": "esp32:esp32:esp32:UploadSpeed=921600,CPUFreq=240,FlashFreq=80,FlashMode=qio,FlashSize=4M,PartitionScheme=min_spiffs,DebugLevel=none,PSRAM=disabled,LoopCore=1,EventsCore=1,EraseFlash=none,JTAGAdapter=default",
+  "sketch_path": "C:\\Users\\User\\OneDrive - @JMTS\\Documentos\\GitHub\\Reloj_Temperatura_Humedad\\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1",
+  "build_path": "C:\\Users\\User\\AppData\\Local\\Temp\\arduino-language-server1519904251",
+  "verbose": true,
+  "create_compilation_database_only": true,
+  "skip_libraries_discovery": true
+}[0m
+11:42:39.332613 [96mINIT --- : Compile successful![0m
+11:42:39.972384 [96mINIT --- : Arduino Data Dir -> c:\Users\Usuario\AppData\Local\Arduino15[0m
+11:42:39.974138 [96mINIT --- :     Starting clangd: c:\Program Files\Arduino IDE\resources\app\lib\backend\resources\clangd.exe -log=verbose --compile-commands-dir=C:\Users\User\AppData\Local\Temp\arduino-language-server1519904251 -query-driver=C:\Users\Usuario\AppData\Local\Arduino15\packages\**[0m
+11:42:39.979349 logging to c:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\inols-clangd.log
+11:42:39.979349 logging to c:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\inols-clangd-err.log
+11:42:39.979349 [91mIDE     LS --> Clangd REQU initialize 1[0m
+11:42:39.979349 OUT Elapsed: 0s
+11:42:40.049644 IN Elapsed: 70.295ms
+11:42:40.050916 [31mIDE     LS <-- Clangd RESP initialize 1[0m
+11:42:40.050916 [96mINIT --- : clangd successfully started: {"capabilities":{"textDocumentSync":{"openClose":true,"change":2,"save":{}},"completionProvider":{"triggerCharacters":[".","\u003c","\u003e",":","\"","/","*"],"allCommitCharacters":[" ","\t","(",")","[","]","{","}","\u003c","\u003e",":",";",",","+","-","/","*","%","^","\u0026","#","?",".","=","\"","'","|"]},"hoverProvider":{},"signatureHelpProvider":{"triggerCharacters":["(",")","{","}","\u003c","\u003e",","]},"declarationProvider":{},"definitionProvider":{},"typeDefinitionProvider":{},"implementationProvider":{},"referencesProvider":{},"documentHighlightProvider":{},"documentSymbolProvider":{},"codeActionProvider":{"codeActionKinds":["quickfix","refactor","info"]},"documentLinkProvider":{},"documentFormattingProvider":{},"documentRangeFormattingProvider":{},"documentOnTypeFormattingProvider":{"firstTriggerCharacter":"\n"},"renameProvider":{"prepareProvider":true},"executeCommandProvider":{"commands":["clangd.applyFix","clangd.applyTweak"]},"selectionRangeProvider":{},"callHierarchyProvider":{},"semanticTokensProvider":{"legend":{"tokenTypes":["variable","variable","parameter","function","method","function","property","variable","class","interface","enum","enumMember","type","type","unknown","namespace","typeParameter","concept","type","macro","comment"],"tokenModifiers":["declaration","deprecated","deduced","readonly","static","abstract","virtual","dependentName","defaultLibrary","usedAsMutableReference","functionScope","classScope","fileScope","globalScope"]},"range":false,"full":{"delta":true}},"workspaceSymbolProvider":{}},"serverInfo":{"name":"clangd","version":"clangd version 14.0.0 windows x86_64-pc-windows-msvc"}}[0m
+11:42:40.051422 [91mIDE     LS --> Clangd NOTIF initialized[0m
+11:42:40.051422 OUT Elapsed: 0s
+11:42:40.051422 [96mINIT --- : Done initializing workbench[0m
+11:42:40.051422 [92m                 textDocument/didOpen: [93mlocked (waiting clangd)[0m[0m
+11:42:40.052432 [92m                 textDocument/didOpen: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp[0m
+11:42:40.055208 [92m                 textDocument/didOpen: Increasing .ino tracked files count to 1[0m
+11:42:40.057031 [91mIDE     LS --> Clangd NOTIF textDocument/didOpen[0m
+11:42:40.057031 OUT Elapsed: 0s
+11:42:40.057536 [92m                 textDocument/didOpen: [93mwrite-unlocked[0m[0m
+11:42:40.057536 IN Elapsed: 0s
+11:42:40.057536 [92mIDE --> LS NOTIF textDocument/didOpen[0m
+11:42:40.057536 [92m                 textDocument/didOpen: [93mwrite-locked[0m[0m
+11:42:40.057536 [92m                 textDocument/didOpen: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/baseDatos.h -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/baseDatos.h[0m
+11:42:40.062360 [91mIDE     LS --> Clangd NOTIF textDocument/didOpen[0m
+11:42:40.062360 OUT Elapsed: 0s
+11:42:40.062360 [92m                 textDocument/didOpen: [93mwrite-unlocked[0m[0m
+11:42:40.062360 IN Elapsed: 0s
+11:42:40.062360 [92mIDE --> LS NOTIF textDocument/didOpen[0m
+11:42:40.065368 [92m                 textDocument/didOpen: [93mwrite-locked[0m[0m
+11:42:40.065368 [92m                 textDocument/didOpen: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/conexionWiFi.h -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/conexionWiFi.h[0m
+11:42:40.065368 [91mIDE     LS --> Clangd NOTIF textDocument/didOpen[0m
+11:42:40.065368 OUT Elapsed: 0s
+11:42:40.065368 [92m                 textDocument/didOpen: [93mwrite-unlocked[0m[0m
+11:42:40.065368 IN Elapsed: 0s
+11:42:40.065368 [92mIDE --> LS NOTIF textDocument/didOpen[0m
+11:42:40.065368 [92m                 textDocument/didOpen: [93mwrite-locked[0m[0m
+11:42:40.072470 IN Elapsed: 22.8261ms
+11:42:40.072470 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+11:42:40.072978 [92m                 textDocument/didOpen: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/configuracion.h -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/configuracion.h[0m
+11:42:40.072978 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+11:42:40.083712 IN Elapsed: 11.2421ms
+11:42:40.083712 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+11:42:40.083712 IN Elapsed: 0s
+11:42:40.084217 [91mIDE     LS <-- Clangd REQU window/workDoneProgress/create 0[0m
+11:42:40.084217 [31mIDE     LS --> Clangd RESP window/workDoneProgress/create 0[0m
+11:42:40.084217 OUT Elapsed: 0s
+11:42:40.084217 IN Elapsed: 0s
+11:42:40.084217 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:42:40.084217 [91m                            $/progress: backgroundIndexProgress BEGIN indexing, 0.0%[0m
+11:42:40.084217 IN Elapsed: 0s
+11:42:40.084217 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:42:40.084217 [91m                            $/progress: backgroundIndexProgress REPORT, 0/1, 0.0%[0m
+11:42:40.084217 [91mIDE     LS --> Clangd NOTIF textDocument/didOpen[0m
+11:42:40.084217 OUT Elapsed: 0s
+11:42:40.084217 [92m                 textDocument/didOpen: [93mwrite-unlocked[0m[0m
+11:42:40.084217 IN Elapsed: 0s
+11:42:40.084217 [92mIDE --> LS NOTIF textDocument/didOpen[0m
+11:42:40.084217 [92m                 textDocument/didOpen: [93mwrite-locked[0m[0m
+11:42:40.084217 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+11:42:40.084217 [92mIDE <-- LS REQU window/workDoneProgress/create 1[0m
+11:42:40.084217 OUT Elapsed: 0s
+11:42:40.084217 [92m                 textDocument/didOpen: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/incluir.h -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/incluir.h[0m
+11:42:40.097242 [91mIDE     LS --> Clangd NOTIF textDocument/didOpen[0m
+11:42:40.097242 OUT Elapsed: 0s
+11:42:40.097242 [92m                 textDocument/didOpen: [93mwrite-unlocked[0m[0m
+11:42:40.097242 IN Elapsed: 0s
+11:42:40.097242 [92mIDE --> LS NOTIF textDocument/didOpen[0m
+11:42:40.097242 [92m                 textDocument/didOpen: [93mwrite-locked[0m[0m
+11:42:40.097242 [92m                 textDocument/didOpen: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/ota.h -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/ota.h[0m
+11:42:40.097242 IN Elapsed: 13.0251ms
+11:42:40.097242 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:42:40.097242 [91m                            $/progress: backgroundIndexProgress REPORT, 0/48, 0.0%[0m
+11:42:40.097242 IN Elapsed: 0s
+11:42:40.097242 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:42:40.097242 [91m                            $/progress: backgroundIndexProgress REPORT, 0/48, 0.0%[0m
+11:42:40.097242 IN Elapsed: 0s
+11:42:40.097242 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:42:40.097242 [91m                            $/progress: backgroundIndexProgress REPORT, 0/48, 0.0%[0m
+11:42:40.097242 IN Elapsed: 0s
+11:42:40.097242 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:42:40.097242 [91m                            $/progress: backgroundIndexProgress REPORT, 1/48, 2.0%[0m
+11:42:40.097242 IN Elapsed: 0s
+11:42:40.097242 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:42:40.097242 [91m                            $/progress: backgroundIndexProgress REPORT, 1/48, 2.0%[0m
+11:42:40.097242 IN Elapsed: 0s
+11:42:40.097242 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:42:40.097242 [91m                            $/progress: backgroundIndexProgress REPORT, 1/48, 2.0%[0m
+11:42:40.129289 [91mIDE     LS --> Clangd NOTIF textDocument/didOpen[0m
+11:42:40.129289 OUT Elapsed: 0s
+11:42:40.129289 [92m                 textDocument/didOpen: [93mwrite-unlocked[0m[0m
+11:42:40.129289 IN Elapsed: 0s
+11:42:40.129289 [92mIDE --> LS NOTIF textDocument/didOpen[0m
+11:42:40.129289 [92m                 textDocument/didOpen: [93mwrite-locked[0m[0m
+11:42:40.129289 [92m                 textDocument/didOpen: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/reloj.h -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/reloj.h[0m
+11:42:40.160084 [91mIDE     LS --> Clangd NOTIF textDocument/didOpen[0m
+11:42:40.160084 OUT Elapsed: 0s
+11:42:40.160084 [92m                 textDocument/didOpen: [93mwrite-unlocked[0m[0m
+11:42:40.160084 IN Elapsed: 0s
+11:42:40.160084 [92mIDE --> LS REQU textDocument/codeAction 1[0m
+11:42:40.160084 [92m                textDocument/codeAction 1: [93mread-locked[0m[0m
+11:42:40.160084 [92m                textDocument/codeAction 1: --> codeAction(file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:78:3)[0m
+11:42:40.165209 [92m                textDocument/codeAction 1: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp[0m
+11:42:40.165209 [92m                textDocument/codeAction 1:     --> codeAction(file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:78:3)[0m
+11:42:40.165209 [91mIDE     LS --> Clangd REQU textDocument/codeAction 2[0m
+11:42:40.165209 OUT Elapsed: 0s
+11:42:43.049350 IN Elapsed: 2.9521076s
+11:42:43.049350 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+11:42:43.064786 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+11:42:43.136349 IN Elapsed: 86.4933ms
+11:42:43.136349 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+11:42:43.137988 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+11:42:43.198850 IN Elapsed: 62.5009ms
+11:42:43.198850 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+11:42:43.201308 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+11:42:47.116686 IN Elapsed: 3.9178365s
+11:42:47.116686 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+11:42:47.117193 IN Elapsed: 0s
+11:42:47.117373 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+11:42:47.117373 [31mIDE     LS <-- Clangd RESP textDocument/codeAction 2[0m
+11:42:47.117373 [92m                textDocument/codeAction 1: [93mread-unlocked[0m[0m
+11:42:47.117373 [32mIDE <-- LS RESP textDocument/codeAction 1[0m
+11:42:47.117877 OUT Elapsed: 504µs
+11:42:47.117877 IN Elapsed: 0s
+11:42:47.117877 [92mIDE --> LS REQU textDocument/codeAction 2[0m
+11:42:47.117877 [92m                textDocument/codeAction 2: [93mread-locked[0m[0m
+11:42:47.117877 [92m                textDocument/codeAction 2: --> codeAction(file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/baseDatos.h:0:0)[0m
+11:42:47.117877 [92m                textDocument/codeAction 2: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/baseDatos.h -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/baseDatos.h[0m
+11:42:47.117877 [92m                textDocument/codeAction 2:     --> codeAction(file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/baseDatos.h:0:0)[0m
+11:42:47.121882 [91mIDE     LS --> Clangd REQU textDocument/codeAction 3[0m
+11:42:47.121882 OUT Elapsed: 0s
+11:42:47.127282 IN Elapsed: 10.0897ms
+11:42:47.127282 [31mIDE     LS <-- Clangd RESP textDocument/codeAction 3[0m
+11:42:47.127282 [92m                textDocument/codeAction 2: [93mread-unlocked[0m[0m
+11:42:47.127282 [32mIDE <-- LS RESP textDocument/codeAction 2[0m
+11:42:47.127788 OUT Elapsed: 506.1µs
+11:42:47.127788 IN Elapsed: 0s
+11:42:47.127788 [92mIDE --> LS REQU textDocument/codeAction 3[0m
+11:42:47.127788 [92m                textDocument/codeAction 3: [93mread-locked[0m[0m
+11:42:47.127788 [92m                textDocument/codeAction 3: --> codeAction(file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/conexionWiFi.h:0:0)[0m
+11:42:47.127788 [92m                textDocument/codeAction 3: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/conexionWiFi.h -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/conexionWiFi.h[0m
+11:42:47.127788 [92m                textDocument/codeAction 3:     --> codeAction(file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/conexionWiFi.h:0:0)[0m
+11:42:47.127788 [91mIDE     LS --> Clangd REQU textDocument/codeAction 4[0m
+11:42:47.127788 OUT Elapsed: 0s
+11:42:47.132090 IN Elapsed: 4.8081ms
+11:42:47.132090 [31mIDE     LS <-- Clangd RESP textDocument/codeAction 4[0m
+11:42:47.132090 [92m                textDocument/codeAction 3: [93mread-unlocked[0m[0m
+11:42:47.132090 [32mIDE <-- LS RESP textDocument/codeAction 3[0m
+11:42:47.132598 OUT Elapsed: 507.1µs
+11:42:47.132598 IN Elapsed: 0s
+11:42:47.132598 [92mIDE --> LS REQU textDocument/codeAction 4[0m
+11:42:47.132598 [92m                textDocument/codeAction 4: [93mread-locked[0m[0m
+11:42:47.132598 [92m                textDocument/codeAction 4: --> codeAction(file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/configuracion.h:0:0)[0m
+11:42:47.132598 [92m                textDocument/codeAction 4: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/configuracion.h -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/configuracion.h[0m
+11:42:47.132598 [92m                textDocument/codeAction 4:     --> codeAction(file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/configuracion.h:0:0)[0m
+11:42:47.132598 [91mIDE     LS --> Clangd REQU textDocument/codeAction 5[0m
+11:42:47.137604 OUT Elapsed: 5.0063ms
+11:42:47.138622 IN Elapsed: 6.5312ms
+11:42:47.138622 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+11:42:47.141552 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+11:42:47.171736 IN Elapsed: 32.6097ms
+11:42:47.172242 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+11:42:47.172488 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+11:42:47.278751 IN Elapsed: 106.5093ms
+11:42:47.284789 [31mIDE     LS <-- Clangd RESP textDocument/codeAction 5[0m
+11:42:47.284789 [92m                textDocument/codeAction 4: [93mread-unlocked[0m[0m
+11:42:47.284789 [32mIDE <-- LS RESP textDocument/codeAction 4[0m
+11:42:47.284789 OUT Elapsed: 0s
+11:42:47.284789 IN Elapsed: 0s
+11:42:47.284789 [92mIDE --> LS REQU textDocument/codeAction 5[0m
+11:42:47.284789 [92m                textDocument/codeAction 5: [93mread-locked[0m[0m
+11:42:47.284789 [92m                textDocument/codeAction 5: --> codeAction(file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/incluir.h:11:23)[0m
+11:42:47.285297 [92m                textDocument/codeAction 5: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/incluir.h -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/incluir.h[0m
+11:42:47.285297 [92m                textDocument/codeAction 5:     --> codeAction(file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/incluir.h:11:23)[0m
+11:42:47.285297 [91mIDE     LS --> Clangd REQU textDocument/codeAction 6[0m
+11:42:47.285297 OUT Elapsed: 0s
+11:42:47.288915 IN Elapsed: 10.1642ms
+11:42:47.289422 [31mIDE     LS <-- Clangd RESP textDocument/codeAction 6[0m
+11:42:47.289422 [92m                textDocument/codeAction 5: [93mread-unlocked[0m[0m
+11:42:47.289422 [32mIDE <-- LS RESP textDocument/codeAction 5[0m
+11:42:47.289422 OUT Elapsed: 0s
+11:42:47.289422 IN Elapsed: 0s
+11:42:47.289422 [92mIDE --> LS REQU textDocument/codeAction 6[0m
+11:42:47.289422 [92m                textDocument/codeAction 6: [93mread-locked[0m[0m
+11:42:47.289422 [92m                textDocument/codeAction 6: --> codeAction(file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/ota.h:0:0)[0m
+11:42:47.289422 [92m                textDocument/codeAction 6: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/ota.h -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/ota.h[0m
+11:42:47.289422 [92m                textDocument/codeAction 6:     --> codeAction(file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/ota.h:0:0)[0m
+11:42:47.289422 [91mIDE     LS --> Clangd REQU textDocument/codeAction 7[0m
+11:42:47.289422 OUT Elapsed: 0s
+11:42:47.293609 IN Elapsed: 4.6937ms
+11:42:47.294115 [31mIDE     LS <-- Clangd RESP textDocument/codeAction 7[0m
+11:42:47.294115 [92m                textDocument/codeAction 6: [93mread-unlocked[0m[0m
+11:42:47.294115 [32mIDE <-- LS RESP textDocument/codeAction 6[0m
+11:42:47.294115 OUT Elapsed: 0s
+11:42:47.294115 IN Elapsed: 0s
+11:42:47.294115 [92mIDE --> LS REQU textDocument/codeAction 7[0m
+11:42:47.294115 [92m                textDocument/codeAction 7: [93mread-locked[0m[0m
+11:42:47.294115 [92m                textDocument/codeAction 7: --> codeAction(file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/reloj.h:0:0)[0m
+11:42:47.296623 [92m                textDocument/codeAction 7: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/reloj.h -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/reloj.h[0m
+11:42:47.298699 [92m                textDocument/codeAction 7:     --> codeAction(file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/reloj.h:0:0)[0m
+11:42:47.298699 [91mIDE     LS --> Clangd REQU textDocument/codeAction 8[0m
+11:42:47.298699 OUT Elapsed: 0s
+11:42:47.936035 IN Elapsed: 642.4262ms
+11:42:47.936035 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+11:42:47.944863 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+11:42:47.945854 IN Elapsed: 9.8194ms
+11:42:47.945854 [31mIDE     LS <-- Clangd RESP textDocument/codeAction 8[0m
+11:42:47.945854 [92m                textDocument/codeAction 7: [93mread-unlocked[0m[0m
+11:42:47.945854 [32mIDE <-- LS RESP textDocument/codeAction 7[0m
+11:42:47.946360 OUT Elapsed: 0s
+11:42:47.946360 IN Elapsed: 0s
+11:42:47.946360 [92mIDE --> LS REQU textDocument/documentSymbol 8[0m
+11:42:47.946360 [92m                textDocument/documentSymbol 8: [93mread-locked[0m[0m
+11:42:47.946360 [92m                textDocument/documentSymbol 8: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp[0m
+11:42:47.946360 [91mIDE     LS --> Clangd REQU textDocument/documentSymbol 9[0m
+11:42:47.946360 OUT Elapsed: 0s
+11:42:48.045980 IN Elapsed: 100.1261ms
+11:42:48.052765 [31mIDE     LS <-- Clangd RESP textDocument/documentSymbol 9[0m
+11:42:48.052765 [92m                textDocument/documentSymbol 8: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp (8 document symbols)[0m
+11:42:48.053274 [92m                textDocument/documentSymbol 8:   > convert SymbolKind:Variable 21:0-21:29[0m
+11:42:48.053274 [92m                textDocument/documentSymbol 8: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:21:0-21:29 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:19:0-19:29 (.ino)[0m
+11:42:48.055347 [92m                textDocument/documentSymbol 8: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:21:14-21:29 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:19:14-19:29 (.ino)[0m
+11:42:48.055347 [92m                textDocument/documentSymbol 8: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp (0 document symbols)[0m
+11:42:48.055347 [92m                textDocument/documentSymbol 8:   > convert SymbolKind:Variable 22:0-22:29[0m
+11:42:48.055347 [92m                textDocument/documentSymbol 8: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:22:0-22:29 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:20:0-20:29 (.ino)[0m
+11:42:48.057980 [92m                textDocument/documentSymbol 8: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:22:14-22:29 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:20:14-20:29 (.ino)[0m
+11:42:48.057980 [92m                textDocument/documentSymbol 8: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp (0 document symbols)[0m
+11:42:48.057980 [92m                textDocument/documentSymbol 8:   > convert SymbolKind:Variable 23:0-23:33[0m
+11:42:48.059660 [92m                textDocument/documentSymbol 8: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:23:0-23:33 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:21:0-21:33 (.ino)[0m
+11:42:48.060166 [92m                textDocument/documentSymbol 8: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:23:14-23:25 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:21:14-21:25 (.ino)[0m
+11:42:48.060166 [92m                textDocument/documentSymbol 8: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp (0 document symbols)[0m
+11:42:48.060166 [92m                textDocument/documentSymbol 8:   > convert SymbolKind:Variable 24:0-24:32[0m
+11:42:48.061745 [92m                textDocument/documentSymbol 8: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:24:0-24:32 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:22:0-22:32 (.ino)[0m
+11:42:48.062250 [92m                textDocument/documentSymbol 8: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:24:14-24:25 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:22:14-22:25 (.ino)[0m
+11:42:48.062250 [92m                textDocument/documentSymbol 8: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp (0 document symbols)[0m
+11:42:48.062250 [92m                textDocument/documentSymbol 8:   > convert SymbolKind:Function 27:0-27:12[0m
+11:42:48.064730 [92m                textDocument/documentSymbol 8: Range is in PREPROCESSED section of the sketch[0m
+11:42:48.064730 [92m                textDocument/documentSymbol 8: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:27:0-27:12 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:24:0-24:12 (.ino)[0m
+11:42:48.064730 [92m                textDocument/documentSymbol 8:     symbol is in the preprocessed section of the sketch.ino.cpp, skipping[0m
+11:42:48.064730 [92m                textDocument/documentSymbol 8:   > convert SymbolKind:Function 29:0-29:11[0m
+11:42:48.064730 [92m                textDocument/documentSymbol 8: Range is in PREPROCESSED section of the sketch[0m
+11:42:48.064730 [92m                textDocument/documentSymbol 8: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:29:0-29:11 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:40:0-40:11 (.ino)[0m
+11:42:48.064730 [92m                textDocument/documentSymbol 8:     symbol is in the preprocessed section of the sketch.ino.cpp, skipping[0m
+11:42:48.064730 [92m                textDocument/documentSymbol 8:   > convert SymbolKind:Function 31:0-46:1[0m
+11:42:48.066578 [92m                textDocument/documentSymbol 8: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:31:0-46:1 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:24:0-39:1 (.ino)[0m
+11:42:48.067083 [92m                textDocument/documentSymbol 8: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:31:5-31:10 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:24:5-24:10 (.ino)[0m
+11:42:48.067083 [92m                textDocument/documentSymbol 8: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp (0 document symbols)[0m
+11:42:48.067083 [92m                textDocument/documentSymbol 8:   > convert SymbolKind:Function 47:2-85:3[0m
+11:42:48.068828 [92m                textDocument/documentSymbol 8: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:47:2-85:3 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:40:2-78:3 (.ino)[0m
+11:42:48.069333 [92m                textDocument/documentSymbol 8: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:47:7-47:11 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:40:7-40:11 (.ino)[0m
+11:42:48.069333 [92m                textDocument/documentSymbol 8: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server1519904251/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp (0 document symbols)[0m
+11:42:48.069333 [92m                textDocument/documentSymbol 8: [93mread-unlocked[0m[0m
+11:42:48.069333 [32mIDE <-- LS RESP textDocument/documentSymbol 8[0m
+11:42:48.069333 OUT Elapsed: 0s
+11:42:48.069333 IN Elapsed: 0s
+11:42:48.070965 [32mIDE --> LS RESP window/workDoneProgress/create 1[0m
+11:42:48.070965 [92mIDE <-- LS NOTIF $/progress[0m
+11:42:48.070965 OUT Elapsed: 0s
+11:42:48.070965 [92mIDE <-- LS NOTIF $/progress[0m
+11:42:48.070965 OUT Elapsed: 0s
+11:42:50.035789 IN Elapsed: 1.9898087s
+11:42:50.035789 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:42:50.035789 [91m                            $/progress: backgroundIndexProgress REPORT, 2/48, 4.0%[0m
+11:42:50.035789 IN Elapsed: 0s
+11:42:50.035789 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:42:50.035789 [91m                            $/progress: backgroundIndexProgress REPORT, 2/48, 4.0%[0m
+11:42:50.035789 [92mIDE <-- LS NOTIF $/progress[0m
+11:42:50.035789 OUT Elapsed: 0s
+11:43:09.871583 IN Elapsed: 19.8357942s
+11:43:09.871583 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:09.871583 [91m                            $/progress: backgroundIndexProgress REPORT, 3/48, 6.0%[0m
+11:43:09.871583 IN Elapsed: 0s
+11:43:09.871583 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:09.871583 [91m                            $/progress: backgroundIndexProgress REPORT, 3/48, 6.0%[0m
+11:43:09.871583 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:09.871583 OUT Elapsed: 0s
+11:43:09.998637 IN Elapsed: 127.0533ms
+11:43:09.998637 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:09.998637 [91m                            $/progress: backgroundIndexProgress REPORT, 4/48, 8.0%[0m
+11:43:09.998637 IN Elapsed: 0s
+11:43:09.998637 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:09.998637 [91m                            $/progress: backgroundIndexProgress REPORT, 4/48, 8.0%[0m
+11:43:10.006730 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:10.006730 OUT Elapsed: 0s
+11:43:11.685051 IN Elapsed: 1.6864146s
+11:43:11.685051 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:11.685051 [91m                            $/progress: backgroundIndexProgress REPORT, 5/48, 10.0%[0m
+11:43:11.685051 IN Elapsed: 0s
+11:43:11.685051 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:11.685051 [91m                            $/progress: backgroundIndexProgress REPORT, 5/48, 10.0%[0m
+11:43:11.685051 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:11.685051 OUT Elapsed: 0s
+11:43:12.463246 IN Elapsed: 778.1945ms
+11:43:12.463246 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:12.463246 [91m                            $/progress: backgroundIndexProgress REPORT, 6/48, 12.0%[0m
+11:43:12.463757 IN Elapsed: 511µs
+11:43:12.463757 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:12.463757 [91m                            $/progress: backgroundIndexProgress REPORT, 6/48, 12.0%[0m
+11:43:12.463757 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:12.463757 OUT Elapsed: 0s
+11:43:13.729825 IN Elapsed: 1.2660679s
+11:43:13.729825 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:13.729825 [91m                            $/progress: backgroundIndexProgress REPORT, 7/48, 14.0%[0m
+11:43:13.729825 IN Elapsed: 0s
+11:43:13.729825 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:13.729825 [91m                            $/progress: backgroundIndexProgress REPORT, 7/48, 14.0%[0m
+11:43:13.734307 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:13.734307 OUT Elapsed: 0s
+11:43:14.097178 IN Elapsed: 367.3533ms
+11:43:14.097178 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:14.097178 [91m                            $/progress: backgroundIndexProgress REPORT, 8/48, 16.0%[0m
+11:43:14.097178 IN Elapsed: 0s
+11:43:14.097178 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:14.097178 [91m                            $/progress: backgroundIndexProgress REPORT, 8/48, 16.0%[0m
+11:43:14.097178 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:14.097178 OUT Elapsed: 0s
+11:43:14.858528 IN Elapsed: 761.3498ms
+11:43:14.858528 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:14.858528 [91m                            $/progress: backgroundIndexProgress REPORT, 9/48, 18.0%[0m
+11:43:14.858528 IN Elapsed: 0s
+11:43:14.858528 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:14.858528 [91m                            $/progress: backgroundIndexProgress REPORT, 9/48, 18.0%[0m
+11:43:14.859925 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:14.859925 OUT Elapsed: 0s
+11:43:15.848008 IN Elapsed: 989.4803ms
+11:43:15.848008 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:15.848008 [91m                            $/progress: backgroundIndexProgress REPORT, 10/48, 20.0%[0m
+11:43:15.848008 IN Elapsed: 0s
+11:43:15.848008 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:15.848008 [91m                            $/progress: backgroundIndexProgress REPORT, 10/48, 20.0%[0m
+11:43:15.848008 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:15.848008 OUT Elapsed: 0s
+11:43:18.121314 IN Elapsed: 2.2733058s
+11:43:18.121314 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:18.121314 [91m                            $/progress: backgroundIndexProgress REPORT, 11/48, 22.0%[0m
+11:43:18.121314 IN Elapsed: 0s
+11:43:18.121314 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:18.121314 [91m                            $/progress: backgroundIndexProgress REPORT, 11/48, 22.0%[0m
+11:43:18.128598 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:18.128598 OUT Elapsed: 0s
+11:43:24.725858 IN Elapsed: 36.6565252s
+11:43:24.750965 [92mIDE --> LS NOTIF ino/didCompleteBuild[0m
+11:43:24.758775 [92m                 ino/didCompleteBuild: [93mwrite-locked[0m[0m
+11:43:24.777517 [92m                 ino/didCompleteBuild: Updated 'libraries.cache'. Copied: C:\Users\User\AppData\Local\Temp\arduino\sketches\221CA89E790DEC6A0F9CF9F3D801852C\libraries.cache to C:\Users\User\AppData\Local\Temp\arduino-language-server1519904251\libraries.cache[0m
+11:43:24.777517 [92m                 ino/didCompleteBuild: [93mwrite-unlocked[0m[0m
+11:43:25.779708 [95mSKETCH REBUILD: : Sketch rebuild started[0m
+11:43:25.779708 [95mSKETCH REBUILD: : [93mread-locked[0m[0m
+11:43:25.779708 [95mSKETCH REBUILD: : [93mread-unlocked[0m[0m
+11:43:25.782628 [92mIDE <-- LS REQU window/workDoneProgress/create 2[0m
+11:43:25.782628 OUT Elapsed: 0s
+11:43:25.783546 IN Elapsed: 1.0060295s
+11:43:25.783546 [32mIDE --> LS RESP window/workDoneProgress/create 2[0m
+11:43:25.783546 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:25.784053 OUT Elapsed: 506.3µs
+11:43:26.099936 [95mSKETCH REBUILD: : Running build with: {
+  "instance": {
+    "id": 1
+  },
+  "fqbn": "esp32:esp32:esp32:UploadSpeed=921600,CPUFreq=240,FlashFreq=80,FlashMode=qio,FlashSize=4M,PartitionScheme=min_spiffs,DebugLevel=none,PSRAM=disabled,LoopCore=1,EventsCore=1,EraseFlash=none,JTAGAdapter=default",
+  "sketch_path": "C:\\Users\\User\\OneDrive - @JMTS\\Documentos\\GitHub\\Reloj_Temperatura_Humedad\\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1",
+  "build_path": "C:\\Users\\User\\AppData\\Local\\Temp\\arduino-language-server1519904251",
+  "verbose": true,
+  "create_compilation_database_only": true,
+  "source_override": {
+    "Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino": "/*\r\n * @JMTS\r\n * ESP32 DEVKIT\r\n * Reloj con fecha y hora más sensor de temperatura y humedad en pantalla LCD I2C 2004\r\n * Sensor de Temperatura-Humedad DHT22.\r\n * Hora a traves de servidor NTP basado en el ejemplo SimpleTime de la libreria del ESP32\r\n * Conexión a base de datos Mysql mediante php con el método POST para realizar un registro\r\n * La retroiluminación del LCD se gradua mediante LDR\r\n * Actualización del frimware via OTA con contraseña basado en el ejemplo ArduinoOTA\r\n * 16/10/2021\r\n */\r\n#include \"incluir.h\"\r\n#include \"configuracion.h\"\r\n#include \"reloj.h\"\r\n#include \"conexionWiFi.h\"\r\n#include \"baseDatos.h\"\r\n#include \"ota.h\"\r\n\r\n// Iniciamos los contadores para insertar en la base de datos y actualizar el reloj\r\nunsigned long previosMillis_0;\r\nunsigned long previosMillis_1;\r\nunsigned long intervalo_0 = 59000;\r\nunsigned long intervalo_1 = 1000;\r\n\r\nvoid setup()\r\n{\r\n  pinMode(LED_PIN, OUTPUT);\r\n  digitalWrite(LED_PIN, LOW); // Turn onboard LED OFF\r\n  Serial.begin(115200); // Se inicia el puerto serie y la velocidad\r\n  lcd.init();           // Se inicia el lcd\r\n  lcd.backlight();      // Se enciende la retroiluminación del lcd\r\n  lcd.clear();          // Se borra la pantalla del lcd\r\n  dht.begin();          // Se inicia la lectura del dht\r\n\r\n  // Conexion a la wifi y sincronización del reloj NTP\r\n  conectarWiFi();\r\n\r\n  // Configuramos la actualización via OTA\r\n  actualizacionOTA();\r\n}\r\n  void loop()\r\n  {\r\n    \r\n    //Si se ha perdido la conexión wifi llamamos a la función para conectar de nuevo y configuramos fecha y hora\r\n    if (WiFi.isConnected() == false)\r\n    {\r\n      conectarWiFi();\r\n      configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);\r\n    }\r\n\r\n    // Llamamos a la función para imprimir los datos en el LCD cada segundo\r\n    unsigned long currentMillis = millis();\r\n    \r\n    // Llamamos, cada minuto, a la función para insertar los datos en la base de datos\r\n    if ((unsigned long) (currentMillis - previosMillis_0) \u003e= intervalo_0)\r\n    {\r\n      enviarBD();\r\n      previosMillis_0 = millis();\r\n    }\r\n    if ((unsigned long) (currentMillis - previosMillis_1) \u003e= intervalo_1)\r\n    {\r\n      mostrarTemperatura();\r\n      previosMillis_1 = millis();\r\n    }\r\n\r\n     // Comprobamos la intensidad de la luz\r\n    valorLDR = analogRead(pinLDR); // Leemos la variable del LDR\r\n    unsigned int x = valorLDR / 8;\r\n    if(x \u003c6)\r\n    {\r\n      valorLCD = 5; // esto es para que nunca se apaque del todo el LCD\r\n    }else{\r\n      valorLCD = x; // Asignamos el valor de iluminación del LCD en base al valor del LDR\r\n    }\r\n    pwm.analogWrite(pinLCD, valorLCD); // Escribimos en el pinLCD el valor de la retroiluminación\r\n    \r\n    ArduinoOTA.handle(); //Llamamos a la actualización via OTA\r\n\r\n  }",
+    "baseDatos.h": "/*\r\n * Conexión con la base de datos y envío de la información\r\n * 24/03/2021\r\n */\r\n#include \"incluir.h\"\r\nHTTPClient http; // Se crea el objeto http para el envío de datos\r\n\r\nvoid enviarBD()\r\n{\r\n  // Leemos las variables de temperatura, humedad y el cálculo de la senación térmica\r\n  double h = dht.readHumidity();                  //Leemos la humedad del sensor\r\n  String Hum = String(h, 2);                      // La convertimos a un String\r\n  double t = dht.readTemperature();               // Leemos la temperatura del sensor\r\n  String Temp = String(t, 2);                     // La convertimos a un String\r\n  double hic = dht.computeHeatIndex(t, h, false); // Calculamos la sensación térmica\r\n  String TeR = String(hic, 2);                    // La convertimos a un String\r\n  String datos = (\"t=\" + Temp + \"\u0026h=\" + Hum + \"\u0026st=\" + TeR + \"\u0026ub=\" + ub);\r\n\r\n  http.begin(url);                                                     // Iniciamos la conexión http con la dirección web donde esta la páguina que nos inserta los datos\r\n  http.addHeader(\"Content-Type\", \"application/x-www-form-urlencoded\"); // tipo de datos que enviamos\r\n  String httpRequestData = datos;                                      // enviamos los datos por POST\r\n  int httpResponseCode = http.POST(httpRequestData);                   // leemos la respuesta del servidor\r\n  http.end();                                                          // cerramos la conexión http\r\n}\r\n",
+    "conexionWiFi.h": "/*\r\n * Conexión WiFi\r\n * 24/03/2021\r\n */\r\n#include \"incluir.h\"\r\n// Conexión a la WiFi y configuración de fecha y hora\r\nvoid conectarWiFi()\r\n{\r\n  Serial.println(\"Arrancando\");\r\n  WiFi.mode(WIFI_STA);\r\n  WiFi.begin(ssid, password);\r\n  while (WiFi.waitForConnectResult() != WL_CONNECTED)\r\n  {\r\n    Serial.println(\"Conexion fallida! Reseteando...\");\r\n    delay(5000);\r\n    ESP.restart();\r\n  }\r\n  //Iniciamos y configuramos el reloj\r\n  configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);\r\n}\r\n",
+    "configuracion.h": "/* Fichero de configuración para el reloj con envío de datos por POST y actualización via OTA\r\n * Creado el 24/03/2021\r\n * por @JMTS\r\n*/\r\n\r\n#define DHTTYPE DHT22 // Se define el tipo de DHT: DHT 22\r\n#define DHTPIN 27     // Se define el puerto al que conectamos el Sensor DHT: pin digital 27\r\n// Confinguramos el servidor NTP\r\nconst char* ntpServer = \"pool.ntp.org\"; // Servidor NTP para sincronizar el reloj\r\nconst long gmtOffset_sec = 3600;        // Selección de la zona horaria GMT+1\r\nconst int daylightOffset_sec = 3600;    // Configuración para el horario de verano\r\n\r\n// Configuración de la Ubicación\r\n// tambien da nombre al puerto de actualizacion via OTA\r\nbyte ub = 1; // Ubicación (1-despacho) (2-salon) (3-pruebas)\r\n\r\nchar *ubicacion()\r\n{\r\n  char *ubic;\r\n  if (ub == 1)\r\n  {\r\n    ubic = \"Despacho\";\r\n  }\r\n  else if (ub == 2)\r\n  {\r\n    ubic = \"Salon\";\r\n  }\r\n  else if (ub == 3)\r\n  {\r\n    ubic = \"Pruebas\";\r\n  }\r\n  return ubic;\r\n}\r\n\r\n//Configuración de la WiFi\r\nconst char *ssid = \"****\";\r\nconst char *password = \"****\";\r\n\r\n//Password para la actualización via OTA\r\nchar *passwordOTA = \"*****\";\r\n\r\n//Configuración del Servidor Web\r\nString dominio = \"*****\"; // Dominio donde está alojada la web.\r\nString url = \"https://\" + dominio + \"/config/insertar_post.php\"; //Dirección web del servidor\r\n\r\n// Tipo de LCD y Dirección I2C LCD\r\nint col = 20;    //Columnas del LCD\r\nint fil = 4;     //Filas del LCD\r\nbyte dir = 0x27; //Dirección I2C del LCD\r\n\r\n// Asignamos los pines de la iluminación del LCD y del LDR y declaramos sus variables\r\nconst int pinLCD = 18;\r\nconst int pinLDR = 32;\r\nunsigned int valorLDR;\r\nunsigned int valorLCD;\r\n",
+    "incluir.h": "/*\r\n * Fichero con los includes necesarios\r\n * Hay que ponerlos en orden de ejecución de las funciones para que no den fallos\r\n * 24/03/2021\r\n */\r\n#include \u003cWiFi.h\u003e\r\n#include \u003cLiquidCrystal_I2C.h\u003e\r\n#include \u003cTime.h\u003e\r\n#include \u003cDHT.h\u003e\r\n#include \u003cArduinoOTA.h\u003e\r\n#include \u003cPWMOutESP32.h\u003e\r\n#include \u003cHTTPClient.h\u003e\r\n",
+    "ota.h": "/*\r\n * 14/06/2021\r\n*/\r\nvoid actualizacionOTA(){\r\n// ACTUALIZACIONES VIA OTA\r\n// Establecemos el nombre del dispositivo por la ubicación\r\nArduinoOTA.setHostname(ubicacion());\r\n// Establecemos una contraseña para autentificar la actualización\r\nArduinoOTA.setPassword(passwordOTA);\r\n\r\nArduinoOTA\r\n    .onStart([]() {\r\n      String type;\r\n      if (ArduinoOTA.getCommand() == U_FLASH)\r\n        type = \"sketch\";\r\n      else // U_SPIFFS\r\n        type = \"filesystem\";\r\n\r\n      // NOTA: si actualiza SPIFFS, este sería el lugar para desmontar SPIFFS usando SPIFFS.end ()\r\n      Serial.println(\"Start updating \" + type);\r\n    })\r\n    .onEnd([]() {\r\n      Serial.println(\"\\nEnd\");\r\n    })\r\n    .onProgress([](unsigned int progress, unsigned int total) {\r\n      Serial.printf(\"Progress: %u%%\\r\", (progress / (total / 100)));\r\n    })\r\n    .onError([](ota_error_t error) {\r\n      Serial.printf(\"Error[%u]: \", error);\r\n      if (error == OTA_AUTH_ERROR)\r\n        Serial.println(\"Auth Failed\");\r\n      else if (error == OTA_BEGIN_ERROR)\r\n        Serial.println(\"Begin Failed\");\r\n      else if (error == OTA_CONNECT_ERROR)\r\n        Serial.println(\"Connect Failed\");\r\n      else if (error == OTA_RECEIVE_ERROR)\r\n        Serial.println(\"Receive Failed\");\r\n      else if (error == OTA_END_ERROR)\r\n        Serial.println(\"End Failed\");\r\n    });\r\n\r\nArduinoOTA.begin();\r\n\r\nSerial.println(\"Ready\");\r\nSerial.print(\"IP address: \");\r\nSerial.println(WiFi.localIP());\r\n}\r\n",
+    "reloj.h": "/*\r\n * Funciones para mostrar en el LCD los datos de reloj y sensor DHT\r\n * 24/03/2021\r\n */\r\n#include \"incluir.h\"\r\n\r\ntime_t local, utc;\r\nLiquidCrystal_I2C lcd(dir, col, fil); // Creamos el objeto LCD y lo configuramos con su direccion I2C y el tipo de pantalla (en este caso 2004)\r\nDHT dht(DHTPIN, DHTTYPE);             // Creamos el objeto DHT y lo configuramos cno su pin y el tipo\r\n\r\n// Función fecha para mostrarla en el LCD\r\nvoid fecha()\r\n{\r\n  configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);\r\n  struct tm timeinfo;\r\n  if (!getLocalTime(\u0026timeinfo))\r\n  {\r\n    Serial.println(\"Fallo al obtener fecha y hora\");\r\n    return;\r\n  }\r\n  // Conseguir el día de la semana corto en castellano\r\n  String diaSemana[] = {\"Dom\", \"Lun\", \"Mar\", \"Mie\", \"Jue\", \"Vie\", \"Sab\"};\r\n  String diaS = diaSemana[timeinfo.tm_wday];\r\n  // Conseguir el mes en castellano\r\n  String meses[] = {\"Ene\", \"Feb\", \"Mar\", \"Abr\", \"May\", \"Jun\", \"Jul\", \"Ago\", \"Sep\", \"Oct\", \"Nov\", \"Dic\"};\r\n  String mes = meses[timeinfo.tm_mon];\r\n  // Mostrar la fecha y hora en el LCD\r\n  lcd.setCursor(7, 0);\r\n  lcd.print(\u0026timeinfo, \"%H:%M\");\r\n  lcd.setCursor(2, 1); // Situamos el cursor en la primera linea del LCD\r\n  lcd.print(diaS);\r\n  lcd.setCursor(5, 1);\r\n  lcd.print(\u0026timeinfo, \" %d \");\r\n  lcd.print(mes);\r\n  lcd.print(\u0026timeinfo, \" %Y\");\r\n}\r\n\r\n// Función mostrarTemperatura para imprimirlaen el LCD\r\nvoid mostrarTemperatura()\r\n{\r\n  double h = dht.readHumidity();                  //Leemos la humedad del sensor\r\n  String Hum = String(h, 1);                      // La convertimos a un String\r\n  double t = dht.readTemperature();               // Leemos la temperatura del sensor\r\n  String Temp = String(t, 2);                     // La convertimos a un String\r\n  char g = (char)223;                             // Generamos el simbolo de grados centigrados para mostrar por LCD\r\n  char p = '%';                                   // Simbolo de % para mostrar por el LCD\r\n  double hic = dht.computeHeatIndex(t, h, false); // Calculamos la sensación térmica\r\n  String TeR = String(hic, 2);                    // La convertimos a un String\r\n  String t1(\"Tem:\" + Temp + g);                   // Se crea la cadena de la temperatura\r\n  String t2(\"Hum:\" + Hum + p);                    // Se crea la cadena de la humedad\r\n  String t3(\"Sen.Ter.: \" + TeR + g);              // Se crea la cadena de la sensacion termica\r\n\r\n  fecha();              // Se imprime el día de la semana, fecha y hora en el LCD\r\n  lcd.setCursor(0, 2);  // Se situa el cursor en la segunda linea del LCD\r\n  lcd.print(t1);        // Se imprime la temperatura en el LCD\r\n  lcd.setCursor(11, 2); // Se situa el cursor en la tercera linea en la posición 4 para que cuadre\r\n  lcd.print(t2);        // Se imprime la humedad en el LCD\r\n  lcd.setCursor(2, 3);  // Se situa el cursor en la cuarta linea\r\n  lcd.print(t3);        // Se imprime la sensacion termica en el LCD\r\n}\r\n"
+  },
+  "skip_libraries_discovery": true
+}[0m
+11:43:26.602099 IN Elapsed: 8.4807855s
+11:43:26.602099 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:26.602099 [91m                            $/progress: backgroundIndexProgress REPORT, 12/48, 25.0%[0m
+11:43:26.602099 IN Elapsed: 0s
+11:43:26.602099 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:26.602099 [91m                            $/progress: backgroundIndexProgress REPORT, 12/48, 25.0%[0m
+11:43:26.602614 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:26.602614 OUT Elapsed: 0s
+11:43:32.203449 [95mSKETCH REBUILD: : Compile successful![0m
+11:43:32.365293 [95mSKETCH REBUILD: : [93mwrite-locked[0m[0m
+11:43:32.379944   > Current sketchmapper content:
+11:43:32.379944   0: #include <Arduino.h>                                         | /not-ino:0                                         
+11:43:32.379944   1: #line 1 "C:\\Users\\User\\OneDrive - @JMTS\\Documentos\\GitH | /not-ino:0                                         
+11:43:32.379944   2: /*                                                           | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:0                          
+11:43:32.379944   3:  * @JMTS                                                     | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:1                          
+11:43:32.379944   4:  * ESP32 DEVKIT                                              | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:2                          
+11:43:32.379944   5:  * Reloj con fecha y hora más sensor de temperatura y humed  | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:3                          
+11:43:32.379944   6:  * Sensor de Temperatura-Humedad DHT22.                      | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:4                          
+11:43:32.379944   7:  * Hora a traves de servidor NTP basado en el ejemplo Simple | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:5                          
+11:43:32.379944   8:  * Conexión a base de datos Mysql mediante php con el méto   | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:6                          
+11:43:32.379944   9:  * La retroiluminación del LCD se gradua mediante LDR        | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:7                          
+11:43:32.379944  10:  * Actualización del frimware via OTA con contraseña basad   | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:8                          
+11:43:32.379944  11:  * 16/10/2021                                                | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:9                          
+11:43:32.379944  12:  */                                                          | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:10                          
+11:43:32.379944  13: #include "incluir.h"                                         | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:11                          
+11:43:32.379944  14: #include "configuracion.h"                                   | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:12                          
+11:43:32.379944  15: #include "reloj.h"                                           | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:13                          
+11:43:32.379944  16: #include "conexionWiFi.h"                                    | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:14                          
+11:43:32.379944  17: #include "baseDatos.h"                                       | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:15                          
+11:43:32.379944  18: #include "ota.h"                                             | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:16                          
+11:43:32.379944  19:                                                              | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:17                          
+11:43:32.379944  20: // Iniciamos los contadores para insertar en la base de dato | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:18                          
+11:43:32.379944  21: unsigned long previosMillis_0;                               | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:19                          
+11:43:32.380448  22: unsigned long previosMillis_1;                               | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:20                          
+11:43:32.380615  23: unsigned long intervalo_0 = 59000;                           | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:21                          
+11:43:32.380615  24: unsigned long intervalo_1 = 1000;                            | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:22                          
+11:43:32.380615  25:                                                              | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:23                          
+11:43:32.380615  26: #line 25 "C:\\Users\\User\\OneDrive - @JMTS\\Documentos\\Git | /not-ino:0                                         
+11:43:32.380615  27: void setup();                                                | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:24 C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:24
+11:43:32.380615  28: #line 41 "C:\\Users\\User\\OneDrive - @JMTS\\Documentos\\Git | /not-ino:0                                         
+11:43:32.380615  29: void loop();                                                 | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:40 C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:40
+11:43:32.380615  30: #line 25 "C:\\Users\\User\\OneDrive - @JMTS\\Documentos\\Git | /not-ino:0                                         
+11:43:32.380615  31: void setup()                                                 | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:24                          
+11:43:32.381619  32: {                                                            | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:25                          
+11:43:32.381619  33:   pinMode(LED_PIN, OUTPUT);                                  | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:26                          
+11:43:32.381619  34:   digitalWrite(LED_PIN, LOW); // Turn onboard LED OFF        | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:27                          
+11:43:32.381929  35:   Serial.begin(115200); // Se inicia el puerto serie y la ve | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:28                          
+11:43:32.381929  36:   lcd.init();           // Se inicia el lcd                  | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:29                          
+11:43:32.381929  37:   lcd.backlight();      // Se enciende la retroiluminación   | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:30                          
+11:43:32.381929  38:   lcd.clear();          // Se borra la pantalla del lcd      | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:31                          
+11:43:32.381929  39:   dht.begin();          // Se inicia la lectura del dht      | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:32                          
+11:43:32.381929  40:                                                              | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:33                          
+11:43:32.381929  41:   // Conexion a la wifi y sincronización del reloj NTP       | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:34                          
+11:43:32.381929  42:   conectarWiFi();                                            | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:35                          
+11:43:32.381929  43:                                                              | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:36                          
+11:43:32.381929  44:   // Configuramos la actualización via OTA                   | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:37                          
+11:43:32.381929  45:   actualizacionOTA();                                        | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:38                          
+11:43:32.381929  46: }                                                            | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:39                          
+11:43:32.381929  47:   void loop()                                                | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:40                          
+11:43:32.381929  48:   {                                                          | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:41                          
+11:43:32.381929  49:                                                              | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:42                          
+11:43:32.381929  50:     //Si se ha perdido la conexión wifi llamamos a la funci  | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:43                          
+11:43:32.381929  51:     if (WiFi.isConnected() == false)                         | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:44                          
+11:43:32.382434  52:     {                                                        | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:45                          
+11:43:32.382434  53:       conectarWiFi();                                        | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:46                          
+11:43:32.382434  54:       configTime(gmtOffset_sec, daylightOffset_sec, ntpServe | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:47                          
+11:43:32.382434  55:     }                                                        | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:48                          
+11:43:32.382434  56:                                                              | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:49                          
+11:43:32.382434  57:     // Llamamos a la función para imprimir los datos en el   | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:50                          
+11:43:32.382434  58:     unsigned long currentMillis = millis();                  | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:51                          
+11:43:32.382434  59:                                                              | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:52                          
+11:43:32.382434  60:     // Llamamos, cada minuto, a la función para insertar lo  | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:53                          
+11:43:32.382434  61:     if ((unsigned long) (currentMillis - previosMillis_0) >= | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:54                          
+11:43:32.382434  62:     {                                                        | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:55                          
+11:43:32.382434  63:       enviarBD();                                            | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:56                          
+11:43:32.382434  64:       previosMillis_0 = millis();                            | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:57                          
+11:43:32.382434  65:     }                                                        | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:58                          
+11:43:32.382434  66:     if ((unsigned long) (currentMillis - previosMillis_1) >= | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:59                          
+11:43:32.382434  67:     {                                                        | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:60                          
+11:43:32.382434  68:       mostrarTemperatura();                                  | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:61                          
+11:43:32.382434  69:       previosMillis_1 = millis();                            | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:62                          
+11:43:32.382434  70:     }                                                        | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:63                          
+11:43:32.382434  71:                                                              | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:64                          
+11:43:32.382434  72:      // Comprobamos la intensidad de la luz                  | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:65                          
+11:43:32.382434  73:     valorLDR = analogRead(pinLDR); // Leemos la variable del | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:66                          
+11:43:32.382434  74:     unsigned int x = valorLDR / 8;                           | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:67                          
+11:43:32.382434  75:     if(x <6)                                                 | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:68                          
+11:43:32.382434  76:     {                                                        | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:69                          
+11:43:32.382434  77:       valorLCD = 5; // esto es para que nunca se apaque del  | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:70                          
+11:43:32.382434  78:     }else{                                                   | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:71                          
+11:43:32.382434  79:       valorLCD = x; // Asignamos el valor de iluminación de  | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:72                          
+11:43:32.382434  80:     }                                                        | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:73                          
+11:43:32.382434  81:     pwm.analogWrite(pinLCD, valorLCD); // Escribimos en el p | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:74                          
+11:43:32.382434  82:                                                              | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:75                          
+11:43:32.382434  83:     ArduinoOTA.handle(); //Llamamos a la actualización via   | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:76                          
+11:43:32.382434  84:                                                              | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:77                          
+11:43:32.382434  85:   }                                                          | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:78                          
+11:43:32.382434  86:                                                              | C:\Users\User\OneDrive - @JMTS\Documentos\GitHub\Reloj_Temperatura_Humedad\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1\Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:79                          
+11:43:32.382434 [95mSKETCH REBUILD: : Sending 'didSave' notification to Clangd[0m
+11:43:32.382434 [91mIDE     LS --> Clangd NOTIF textDocument/didSave[0m
+11:43:32.382976 OUT Elapsed: 0s
+11:43:32.382976 [95mSKETCH REBUILD: : Sending full-text 'didChange' notification to Clangd[0m
+11:43:32.382976 [91mIDE     LS --> Clangd NOTIF textDocument/didChange[0m
+11:43:32.382976 OUT Elapsed: 0s
+11:43:32.382976 [95mSKETCH REBUILD: : [93mwrite-unlocked[0m[0m
+11:43:32.382976 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:32.383498 OUT Elapsed: 521.7µs
+11:43:32.874533 IN Elapsed: 6.2719189s
+11:43:32.874533 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:32.874533 [91m                            $/progress: backgroundIndexProgress REPORT, 12/49, 24.0%[0m
+11:43:32.876310 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:32.876310 OUT Elapsed: 0s
+11:43:35.850602 IN Elapsed: 2.9760688s
+11:43:35.851109 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+11:43:35.852152 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+11:43:35.932734 IN Elapsed: 81.6251ms
+11:43:35.932734 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+11:43:35.936867 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+11:43:35.956926 IN Elapsed: 24.1922ms
+11:43:35.956926 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+11:43:35.957537 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+11:43:35.990303 IN Elapsed: 33.3764ms
+11:43:35.990303 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:35.990303 [91m                            $/progress: backgroundIndexProgress REPORT, 13/49, 26.0%[0m
+11:43:35.990303 IN Elapsed: 0s
+11:43:35.990303 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:35.990303 [91m                            $/progress: backgroundIndexProgress REPORT, 13/49, 26.0%[0m
+11:43:35.990813 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:35.990813 OUT Elapsed: 0s
+11:43:36.038009 IN Elapsed: 47.7069ms
+11:43:36.038009 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+11:43:36.038009 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+11:43:36.211304 IN Elapsed: 173.2943ms
+11:43:36.211304 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:36.211304 [91m                            $/progress: backgroundIndexProgress REPORT, 14/49, 28.0%[0m
+11:43:36.211304 IN Elapsed: 0s
+11:43:36.211304 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:36.211304 [91m                            $/progress: backgroundIndexProgress REPORT, 14/49, 28.0%[0m
+11:43:36.211304 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:36.211304 OUT Elapsed: 0s
+11:43:36.532454 IN Elapsed: 321.1503ms
+11:43:36.532454 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:36.532454 [91m                            $/progress: backgroundIndexProgress REPORT, 14/49, 28.0%[0m
+11:43:36.532454 IN Elapsed: 0s
+11:43:36.532454 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:36.532454 [91m                            $/progress: backgroundIndexProgress REPORT, 15/49, 30.0%[0m
+11:43:36.532454 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:36.533013 OUT Elapsed: 52.6µs
+11:43:36.533013 IN Elapsed: 0s
+11:43:36.533013 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:36.533013 [91m                            $/progress: backgroundIndexProgress REPORT, 15/49, 30.0%[0m
+11:43:36.533013 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:36.533013 OUT Elapsed: 0s
+11:43:38.409649 IN Elapsed: 1.8766361s
+11:43:38.409649 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:38.409649 [91m                            $/progress: backgroundIndexProgress REPORT, 16/49, 32.0%[0m
+11:43:38.409649 IN Elapsed: 0s
+11:43:38.409649 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:38.409649 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:38.409649 [91m                            $/progress: backgroundIndexProgress REPORT, 16/49, 32.0%[0m
+11:43:38.409649 OUT Elapsed: 0s
+11:43:38.409649 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:38.409649 OUT Elapsed: 0s
+11:43:38.618766 IN Elapsed: 209.1176ms
+11:43:38.618766 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:38.618766 [91m                            $/progress: backgroundIndexProgress REPORT, 17/49, 34.0%[0m
+11:43:38.618766 IN Elapsed: 0s
+11:43:38.618766 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:38.618766 [91m                            $/progress: backgroundIndexProgress REPORT, 17/49, 34.0%[0m
+11:43:38.618766 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:38.618766 OUT Elapsed: 0s
+11:43:38.762472 IN Elapsed: 143.7056ms
+11:43:38.762472 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:38.762472 [91m                            $/progress: backgroundIndexProgress REPORT, 18/49, 36.0%[0m
+11:43:38.762472 IN Elapsed: 0s
+11:43:38.762472 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:38.762472 [91m                            $/progress: backgroundIndexProgress REPORT, 18/49, 36.0%[0m
+11:43:38.764907 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:38.764907 OUT Elapsed: 0s
+11:43:39.805474 IN Elapsed: 1.0430024s
+11:43:39.805474 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:39.805474 [91m                            $/progress: backgroundIndexProgress REPORT, 19/49, 38.0%[0m
+11:43:39.805474 IN Elapsed: 0s
+11:43:39.805474 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:39.805474 [91m                            $/progress: backgroundIndexProgress REPORT, 19/49, 38.0%[0m
+11:43:39.805474 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:39.805474 OUT Elapsed: 0s
+11:43:39.996166 IN Elapsed: 190.692ms
+11:43:39.996166 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:39.996166 [91m                            $/progress: backgroundIndexProgress REPORT, 20/49, 40.0%[0m
+11:43:39.996166 IN Elapsed: 0s
+11:43:39.996166 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:39.996166 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:39.996166 [91m                            $/progress: backgroundIndexProgress REPORT, 20/49, 40.0%[0m
+11:43:39.996166 OUT Elapsed: 0s
+11:43:39.996166 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:39.996166 OUT Elapsed: 0s
+11:43:41.126647 IN Elapsed: 1.1304806s
+11:43:41.126647 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:41.126647 [91m                            $/progress: backgroundIndexProgress REPORT, 21/49, 42.0%[0m
+11:43:41.126647 IN Elapsed: 0s
+11:43:41.126647 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:41.126647 [91m                            $/progress: backgroundIndexProgress REPORT, 21/49, 42.0%[0m
+11:43:41.126647 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:41.126647 OUT Elapsed: 0s
+11:43:42.946771 IN Elapsed: 1.820124s
+11:43:42.946771 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:42.946771 [91m                            $/progress: backgroundIndexProgress REPORT, 22/49, 44.0%[0m
+11:43:42.946771 IN Elapsed: 0s
+11:43:42.946771 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:42.946771 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:42.946771 OUT Elapsed: 0s
+11:43:42.946771 [91m                            $/progress: backgroundIndexProgress REPORT, 22/49, 44.0%[0m
+11:43:42.946771 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:42.946771 OUT Elapsed: 0s
+11:43:42.973256 IN Elapsed: 26.4855ms
+11:43:42.973256 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:42.973256 [91m                            $/progress: backgroundIndexProgress REPORT, 23/49, 46.0%[0m
+11:43:42.973256 IN Elapsed: 0s
+11:43:42.973256 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:42.973256 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:42.973256 OUT Elapsed: 0s
+11:43:42.973256 [91m                            $/progress: backgroundIndexProgress REPORT, 23/49, 46.0%[0m
+11:43:42.973256 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:42.973256 OUT Elapsed: 0s
+11:43:43.950425 IN Elapsed: 977.1686ms
+11:43:43.950425 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:43.950425 [91m                            $/progress: backgroundIndexProgress REPORT, 24/49, 48.0%[0m
+11:43:43.950425 IN Elapsed: 0s
+11:43:43.950425 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:43.950425 [91m                            $/progress: backgroundIndexProgress REPORT, 24/49, 48.0%[0m
+11:43:43.950425 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:43.950425 OUT Elapsed: 0s
+11:43:44.238809 IN Elapsed: 288.3843ms
+11:43:44.238809 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:44.238809 [91m                            $/progress: backgroundIndexProgress REPORT, 25/49, 51.0%[0m
+11:43:44.238809 IN Elapsed: 0s
+11:43:44.238809 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:44.238809 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:44.238809 OUT Elapsed: 0s
+11:43:44.238809 [91m                            $/progress: backgroundIndexProgress REPORT, 25/49, 51.0%[0m
+11:43:44.238809 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:44.238809 OUT Elapsed: 0s
+11:43:44.252530 IN Elapsed: 13.7204ms
+11:43:44.252530 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:44.252530 [91m                            $/progress: backgroundIndexProgress REPORT, 26/49, 53.0%[0m
+11:43:44.252530 IN Elapsed: 0s
+11:43:44.252530 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:44.252530 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:44.252530 OUT Elapsed: 0s
+11:43:44.252530 [91m                            $/progress: backgroundIndexProgress REPORT, 26/49, 53.0%[0m
+11:43:44.252530 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:44.252530 OUT Elapsed: 0s
+11:43:44.608638 IN Elapsed: 356.1078ms
+11:43:44.608638 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:44.608638 [91m                            $/progress: backgroundIndexProgress REPORT, 27/49, 55.0%[0m
+11:43:44.608638 IN Elapsed: 0s
+11:43:44.608638 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:44.608638 [91m                            $/progress: backgroundIndexProgress REPORT, 27/49, 55.0%[0m
+11:43:44.608638 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:44.608638 OUT Elapsed: 0s
+11:43:45.471653 IN Elapsed: 863.0157ms
+11:43:45.471653 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:45.471653 [91m                            $/progress: backgroundIndexProgress REPORT, 28/49, 57.0%[0m
+11:43:45.471653 IN Elapsed: 0s
+11:43:45.471653 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:45.471653 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:45.471653 OUT Elapsed: 0s
+11:43:45.471653 [91m                            $/progress: backgroundIndexProgress REPORT, 28/49, 57.0%[0m
+11:43:45.471653 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:45.471653 OUT Elapsed: 0s
+11:43:46.139837 IN Elapsed: 668.1837ms
+11:43:46.139837 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:46.139837 [91m                            $/progress: backgroundIndexProgress REPORT, 29/49, 59.0%[0m
+11:43:46.139837 IN Elapsed: 0s
+11:43:46.139837 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:46.139837 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:46.139837 OUT Elapsed: 0s
+11:43:46.139837 [91m                            $/progress: backgroundIndexProgress REPORT, 29/49, 59.0%[0m
+11:43:46.139837 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:46.139837 OUT Elapsed: 0s
+11:43:46.263806 IN Elapsed: 123.969ms
+11:43:46.263806 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:46.263806 [91m                            $/progress: backgroundIndexProgress REPORT, 30/49, 61.0%[0m
+11:43:46.264317 IN Elapsed: 510.8µs
+11:43:46.265322 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:46.265322 [91m                            $/progress: backgroundIndexProgress REPORT, 30/49, 61.0%[0m
+11:43:46.265322 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:46.265638 OUT Elapsed: 0s
+11:43:46.265638 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:46.265638 OUT Elapsed: 0s
+11:43:47.621801 IN Elapsed: 1.3561635s
+11:43:47.621801 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:47.621801 [91m                            $/progress: backgroundIndexProgress REPORT, 31/49, 63.0%[0m
+11:43:47.621801 IN Elapsed: 0s
+11:43:47.621801 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:47.621801 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:47.621801 OUT Elapsed: 0s
+11:43:47.621801 [91m                            $/progress: backgroundIndexProgress REPORT, 31/49, 63.0%[0m
+11:43:47.621801 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:47.621801 OUT Elapsed: 0s
+11:43:48.036414 IN Elapsed: 414.6132ms
+11:43:48.036414 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:48.036414 [91m                            $/progress: backgroundIndexProgress REPORT, 32/49, 65.0%[0m
+11:43:48.036414 IN Elapsed: 0s
+11:43:48.036414 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:48.036414 [91m                            $/progress: backgroundIndexProgress REPORT, 32/49, 65.0%[0m
+11:43:48.036414 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:48.036414 OUT Elapsed: 0s
+11:43:48.044233 IN Elapsed: 7.819ms
+11:43:48.044233 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:48.044233 [91m                            $/progress: backgroundIndexProgress REPORT, 33/49, 67.0%[0m
+11:43:48.044233 IN Elapsed: 0s
+11:43:48.044233 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:48.044233 [91m                            $/progress: backgroundIndexProgress REPORT, 33/49, 67.0%[0m
+11:43:48.057791 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:48.057791 OUT Elapsed: 0s
+11:43:48.402389 IN Elapsed: 358.156ms
+11:43:48.402389 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:48.402389 [91m                            $/progress: backgroundIndexProgress REPORT, 34/49, 69.0%[0m
+11:43:48.402389 IN Elapsed: 0s
+11:43:48.402389 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:48.402389 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:48.402389 OUT Elapsed: 0s
+11:43:48.402389 [91m                            $/progress: backgroundIndexProgress REPORT, 34/49, 69.0%[0m
+11:43:48.402389 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:48.402389 OUT Elapsed: 0s
+11:43:49.303713 IN Elapsed: 901.324ms
+11:43:49.303713 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:49.303713 [91m                            $/progress: backgroundIndexProgress REPORT, 35/49, 71.0%[0m
+11:43:49.303713 IN Elapsed: 0s
+11:43:49.303713 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:49.303713 [91m                            $/progress: backgroundIndexProgress REPORT, 35/49, 71.0%[0m
+11:43:49.303713 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:49.303713 OUT Elapsed: 0s
+11:43:49.567349 IN Elapsed: 263.6353ms
+11:43:49.567349 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:49.567349 [91m                            $/progress: backgroundIndexProgress REPORT, 36/49, 73.0%[0m
+11:43:49.567349 IN Elapsed: 0s
+11:43:49.567349 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:49.567349 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:49.567349 OUT Elapsed: 0s
+11:43:49.567349 [91m                            $/progress: backgroundIndexProgress REPORT, 36/49, 73.0%[0m
+11:43:49.567349 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:49.567349 OUT Elapsed: 0s
+11:43:49.628460 IN Elapsed: 61.1114ms
+11:43:49.628460 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:49.628460 [91m                            $/progress: backgroundIndexProgress REPORT, 37/49, 75.0%[0m
+11:43:49.628460 IN Elapsed: 0s
+11:43:49.628460 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:49.628460 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:49.628460 OUT Elapsed: 0s
+11:43:49.628460 [91m                            $/progress: backgroundIndexProgress REPORT, 37/49, 75.0%[0m
+11:43:49.628460 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:49.628460 OUT Elapsed: 0s
+11:43:50.175086 IN Elapsed: 546.6262ms
+11:43:50.175086 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:50.175086 [91m                            $/progress: backgroundIndexProgress REPORT, 38/49, 77.0%[0m
+11:43:50.175086 IN Elapsed: 0s
+11:43:50.175086 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:50.175086 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:50.175086 OUT Elapsed: 0s
+11:43:50.175086 [91m                            $/progress: backgroundIndexProgress REPORT, 38/49, 77.0%[0m
+11:43:50.175086 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:50.175086 OUT Elapsed: 0s
+11:43:50.783248 IN Elapsed: 608.1621ms
+11:43:50.783248 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:50.783248 [91m                            $/progress: backgroundIndexProgress REPORT, 39/49, 79.0%[0m
+11:43:50.783248 IN Elapsed: 0s
+11:43:50.783248 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:50.783248 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:50.783248 OUT Elapsed: 0s
+11:43:50.783248 [91m                            $/progress: backgroundIndexProgress REPORT, 39/49, 79.0%[0m
+11:43:50.783248 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:50.783248 OUT Elapsed: 0s
+11:43:51.296899 IN Elapsed: 513.6503ms
+11:43:51.296899 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:51.296899 [91m                            $/progress: backgroundIndexProgress REPORT, 40/49, 81.0%[0m
+11:43:51.296899 IN Elapsed: 0s
+11:43:51.296899 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:51.296899 [91m                            $/progress: backgroundIndexProgress REPORT, 40/49, 81.0%[0m
+11:43:51.296899 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:51.296899 OUT Elapsed: 0s
+11:43:51.450374 IN Elapsed: 153.4756ms
+11:43:51.450374 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:51.450374 [91m                            $/progress: backgroundIndexProgress REPORT, 41/49, 83.0%[0m
+11:43:51.450374 IN Elapsed: 0s
+11:43:51.450374 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:51.450374 [91m                            $/progress: backgroundIndexProgress REPORT, 41/49, 83.0%[0m
+11:43:51.450374 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:51.450374 OUT Elapsed: 0s
+11:43:51.576018 IN Elapsed: 125.6443ms
+11:43:51.576018 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:51.576018 [91m                            $/progress: backgroundIndexProgress REPORT, 42/49, 85.0%[0m
+11:43:51.576018 IN Elapsed: 0s
+11:43:51.576018 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:51.576018 [91m                            $/progress: backgroundIndexProgress REPORT, 42/49, 85.0%[0m
+11:43:51.576018 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:51.576018 OUT Elapsed: 0s
+11:43:51.576018 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:51.576018 OUT Elapsed: 0s
+11:43:51.990298 IN Elapsed: 414.2798ms
+11:43:51.990298 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:51.990298 [91m                            $/progress: backgroundIndexProgress REPORT, 43/49, 87.0%[0m
+11:43:51.990298 IN Elapsed: 0s
+11:43:51.990298 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:51.990298 [91m                            $/progress: backgroundIndexProgress REPORT, 43/49, 87.0%[0m
+11:43:51.990298 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:51.990298 OUT Elapsed: 0s
+11:43:52.401023 IN Elapsed: 410.7248ms
+11:43:52.401023 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:52.401023 [91m                            $/progress: backgroundIndexProgress REPORT, 44/49, 89.0%[0m
+11:43:52.401023 IN Elapsed: 0s
+11:43:52.401023 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:52.401023 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:52.401023 OUT Elapsed: 0s
+11:43:52.401023 [91m                            $/progress: backgroundIndexProgress REPORT, 44/49, 89.0%[0m
+11:43:52.401023 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:52.401023 OUT Elapsed: 0s
+11:43:53.083897 IN Elapsed: 682.8743ms
+11:43:53.083897 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:53.083897 [91m                            $/progress: backgroundIndexProgress REPORT, 45/49, 91.0%[0m
+11:43:53.083897 IN Elapsed: 0s
+11:43:53.083897 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:53.083897 [91m                            $/progress: backgroundIndexProgress REPORT, 45/49, 91.0%[0m
+11:43:53.083897 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:53.083897 OUT Elapsed: 0s
+11:43:53.578363 IN Elapsed: 494.4658ms
+11:43:53.578363 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:53.578363 [91m                            $/progress: backgroundIndexProgress REPORT, 46/49, 93.0%[0m
+11:43:53.578363 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:53.578363 OUT Elapsed: 0s
+11:43:54.620707 IN Elapsed: 1.0423439s
+11:43:54.620707 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:54.620707 [91m                            $/progress: backgroundIndexProgress REPORT, 47/49, 95.0%[0m
+11:43:54.620707 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:54.620707 OUT Elapsed: 0s
+11:43:54.807191 IN Elapsed: 186.4835ms
+11:43:54.807191 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:54.807191 [91m                            $/progress: backgroundIndexProgress REPORT, 48/49, 97.0%[0m
+11:43:54.807191 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:54.807191 OUT Elapsed: 0s
+11:43:55.993585 IN Elapsed: 1.186394s
+11:43:55.993585 [91mIDE     LS <-- Clangd NOTIF $/progress[0m
+11:43:55.993585 [91m                            $/progress: backgroundIndexProgress END [0m
+11:43:55.996754 [92mIDE <-- LS NOTIF $/progress[0m
+11:43:56.000269 OUT Elapsed: 3.5149ms

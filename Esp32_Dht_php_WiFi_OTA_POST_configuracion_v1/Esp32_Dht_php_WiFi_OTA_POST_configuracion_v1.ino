@@ -7,7 +7,7 @@
  * Conexión a base de datos Mysql mediante php con el método POST para realizar un registro
  * La retroiluminación del LCD se gradua mediante LDR
  * Actualización del frimware via OTA con contraseña basado en el ejemplo ArduinoOTA
- * 20/06/2021
+ * 16/10/2021
  */
 #include "incluir.h"
 #include "configuracion.h"
@@ -19,11 +19,13 @@
 // Iniciamos los contadores para insertar en la base de datos y actualizar el reloj
 unsigned long previosMillis_0;
 unsigned long previosMillis_1;
-unsigned long intervalo_0 = 60000;
+unsigned long intervalo_0 = 59000;
 unsigned long intervalo_1 = 1000;
 
 void setup()
 {
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, LOW); // Turn onboard LED OFF
   Serial.begin(115200); // Se inicia el puerto serie y la velocidad
   lcd.init();           // Se inicia el lcd
   lcd.backlight();      // Se enciende la retroiluminación del lcd
@@ -48,20 +50,20 @@ void setup()
 
     // Llamamos a la función para imprimir los datos en el LCD cada segundo
     unsigned long currentMillis = millis();
-    if ((unsigned long) (currentMillis - previosMillis_1) >= intervalo_1)
-    {
-      mostrarTemperatura();
-      previosMillis_1 = millis();
-    }
-
+    
     // Llamamos, cada minuto, a la función para insertar los datos en la base de datos
     if ((unsigned long) (currentMillis - previosMillis_0) >= intervalo_0)
     {
       enviarBD();
       previosMillis_0 = millis();
     }
-    
-    // Comprobamos la intensidad de la luz
+    if ((unsigned long) (currentMillis - previosMillis_1) >= intervalo_1)
+    {
+      mostrarTemperatura();
+      previosMillis_1 = millis();
+    }
+
+     // Comprobamos la intensidad de la luz
     valorLDR = analogRead(pinLDR); // Leemos la variable del LDR
     unsigned int x = valorLDR / 8;
     if(x <6)
@@ -70,7 +72,7 @@ void setup()
     }else{
       valorLCD = x; // Asignamos el valor de iluminación del LCD en base al valor del LDR
     }
-    analogWrite(pinLCD, valorLCD); // Escribimos en el pinLCD el valor
+    pwm.analogWrite(pinLCD, valorLCD); // Escribimos en el pinLCD el valor de la retroiluminación
     
     ArduinoOTA.handle(); //Llamamos a la actualización via OTA
 
