@@ -54,12 +54,12 @@ void setup()
         enviarBD();
         previosMillis_0 = millis();
       }
-    // Llamamos, cada segundo, a la funcion que nos muestra en pantalla
     if ((unsigned long) (currentMillis - previosMillis_1) >= intervalo_1){
         mostrarPantalla();
         previosMillis_1 = millis();
       }
-
+    
+    // Llamamos a la función iluminacion que controla la retroiluminación de la pantalla
     iluminacion();
      
     ArduinoOTA.handle(); //Llamamos a la actualización via OTA

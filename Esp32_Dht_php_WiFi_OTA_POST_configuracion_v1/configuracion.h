@@ -41,7 +41,7 @@ const char *password = "****";
 char *passwordOTA = "****";
 
 //Configuración del Servidor Web
-String dominio = "tudominio.com";
+String dominio = "tu_dominio.com";
 String url = "http://" + dominio + "/config/insertar_post.php"; //Dirección web del servidor
 
 // Tipo de LCD y Dirección I2C LCD
