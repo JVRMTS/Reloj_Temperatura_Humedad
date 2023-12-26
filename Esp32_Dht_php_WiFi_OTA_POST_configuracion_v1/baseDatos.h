@@ -2,7 +2,7 @@
  * Conexión con la base de datos y envío de la información
  * 24/03/2021
  */
-#include "incluir.h"
+#include <HTTPClient.h>
 HTTPClient http; // Se crea el objeto http para el envío de datos
 
 void enviarBD()

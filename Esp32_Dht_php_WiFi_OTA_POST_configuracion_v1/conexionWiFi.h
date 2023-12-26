@@ -2,7 +2,7 @@
  * Conexión WiFi
  * 24/03/2021
  */
-#include "incluir.h"
+#include <WiFi.h>
 // Conexión a la WiFi y configuración de fecha y hora
 void conectarWiFi()
 {

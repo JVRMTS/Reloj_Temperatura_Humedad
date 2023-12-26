@@ -1,7 +1,9 @@
 /*
- * 14/06/2021
+ * 16/06/2021
 */
+#include <ArduinoOTA.h>
 void actualizacionOTA(){
+
 // ACTUALIZACIONES VIA OTA
 // Establecemos el nombre del dispositivo por la ubicación
 ArduinoOTA.setHostname(ubicacion());

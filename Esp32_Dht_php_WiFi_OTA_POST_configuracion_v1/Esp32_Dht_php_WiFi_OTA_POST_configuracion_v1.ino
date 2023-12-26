@@ -9,17 +9,18 @@
  * Actualización del frimware via OTA con contraseña basado en el ejemplo ArduinoOTA
  * 16/10/2021
  */
-#include "incluir.h"
 #include "configuracion.h"
 #include "reloj.h"
 #include "conexionWiFi.h"
 #include "baseDatos.h"
 #include "ota.h"
+#include "ldr.h"
+
 
 // Iniciamos los contadores para insertar en la base de datos y actualizar el reloj
 unsigned long previosMillis_0;
 unsigned long previosMillis_1;
-unsigned long intervalo_0 = 59000;
+unsigned long intervalo_0 = 60000;
 unsigned long intervalo_1 = 1000;
 
 void setup()
@@ -40,40 +41,27 @@ void setup()
 }
   void loop()
   {
-    
     //Si se ha perdido la conexión wifi llamamos a la función para conectar de nuevo y configuramos fecha y hora
-    if (WiFi.isConnected() == false)
-    {
+    if (WiFi.isConnected() == false){
       conectarWiFi();
-      configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
-    }
+      }
 
     // Llamamos a la función para imprimir los datos en el LCD cada segundo
     unsigned long currentMillis = millis();
     
     // Llamamos, cada minuto, a la función para insertar los datos en la base de datos
-    if ((unsigned long) (currentMillis - previosMillis_0) >= intervalo_0)
-    {
-      enviarBD();
-      previosMillis_0 = millis();
-    }
-    if ((unsigned long) (currentMillis - previosMillis_1) >= intervalo_1)
-    {
-      mostrarTemperatura();
-      previosMillis_1 = millis();
-    }
+    if ((unsigned long) (currentMillis - previosMillis_0) >= intervalo_0){
+        enviarBD();
+        previosMillis_0 = millis();
+      }
+    // Llamamos, cada segundo, a la funcion que nos muestra en pantalla
+    if ((unsigned long) (currentMillis - previosMillis_1) >= intervalo_1){
+        mostrarPantalla();
+        previosMillis_1 = millis();
+      }
 
-     // Comprobamos la intensidad de la luz
-    valorLDR = analogRead(pinLDR); // Leemos la variable del LDR
-    unsigned int x = valorLDR / 8;
-    if(x <6)
-    {
-      valorLCD = 5; // esto es para que nunca se apaque del todo el LCD
-    }else{
-      valorLCD = x; // Asignamos el valor de iluminación del LCD en base al valor del LDR
-    }
-    pwm.analogWrite(pinLCD, valorLCD); // Escribimos en el pinLCD el valor de la retroiluminación
-    
+    iluminacion();
+     
     ArduinoOTA.handle(); //Llamamos a la actualización via OTA
 
   }
