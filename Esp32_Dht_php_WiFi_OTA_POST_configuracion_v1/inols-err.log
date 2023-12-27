@@ -7451,3 +7451,134 @@ unsigned int valorLCD;
 10:42:16.796087 [91m                            $/progress: backgroundIndexProgress END [0m
 10:42:16.863837 [92mIDE <-- LS NOTIF $/progress[0m
 10:42:16.864343 OUT Elapsed: 506µs
+10:42:21.045807 IN Elapsed: 4.2497201s
+10:42:21.082707 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+10:42:21.087427 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+10:42:22.441939 IN Elapsed: 1.3592314s
+10:42:22.441939 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+10:42:22.443997 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+10:42:22.561703 IN Elapsed: 119.7644ms
+10:42:22.562207 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+10:42:22.562764 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+10:42:22.604337 IN Elapsed: 42.1297ms
+10:42:22.604337 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+10:42:22.607842 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+10:42:22.637809 IN Elapsed: 33.472ms
+10:42:22.637809 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+10:42:22.642584 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+10:42:22.657879 IN Elapsed: 20.0706ms
+10:42:22.661392 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+10:42:22.664362 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+10:42:22.679676 IN Elapsed: 15.4343ms
+10:42:22.680180 [91mIDE     LS <-- Clangd NOTIF textDocument/publishDiagnostics[0m
+10:42:22.680907 [91m                            textDocument/publishDiagnostics: Ignored by configuration[0m
+10:43:07.992814 IN Elapsed: 53.4843218s
+10:43:07.992814 [92mIDE --> LS REQU textDocument/documentHighlight 155[0m
+10:43:07.992814 [92m                textDocument/documentHighlight 155: [93mread-locked[0m[0m
+10:43:07.996471 [92m                textDocument/documentHighlight 155: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/configuracion.h -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/configuracion.h[0m
+10:43:07.998340 [92m                textDocument/documentHighlight 155: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/configuracion.h:8:45 -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/configuracion.h:9:45[0m
+10:43:07.998340 [91mIDE     LS --> Clangd REQU textDocument/documentHighlight 155[0m
+10:43:07.998340 OUT Elapsed: 0s
+10:43:08.110217 IN Elapsed: 45.4300369s
+10:43:08.110217 [31mIDE     LS <-- Clangd RESP textDocument/documentHighlight 155[0m
+10:43:08.110217 [92m                textDocument/documentHighlight 155: [93mread-unlocked[0m[0m
+10:43:08.110217 [32mIDE <-- LS RESP textDocument/documentHighlight 155[0m
+10:43:08.110217 OUT Elapsed: 0s
+10:43:08.235072 IN Elapsed: 124.8558ms
+10:43:08.235072 [92mIDE --> LS REQU textDocument/codeAction 156[0m
+10:43:08.235579 [92m                textDocument/codeAction 156: [93mread-locked[0m[0m
+10:43:08.235579 [92m                textDocument/codeAction 156: --> codeAction(file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/configuracion.h:8:45)[0m
+10:43:08.238119 [92m                textDocument/codeAction 156: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/configuracion.h -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/configuracion.h[0m
+10:43:08.241026 [92m                textDocument/codeAction 156:     --> codeAction(file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/configuracion.h:8:45)[0m
+10:43:08.241531 [91mIDE     LS --> Clangd REQU textDocument/codeAction 156[0m
+10:43:08.241531 OUT Elapsed: 0s
+10:43:08.242541 IN Elapsed: 132.3247ms
+10:43:08.243770 [31mIDE     LS <-- Clangd RESP textDocument/codeAction 156[0m
+10:43:08.243770 [92m                textDocument/codeAction 156: [93mread-unlocked[0m[0m
+10:43:08.243770 [32mIDE <-- LS RESP textDocument/codeAction 156[0m
+10:43:08.244275 OUT Elapsed: 505.2µs
+10:44:18.751317 IN Elapsed: 1m10.5070419s
+10:44:18.751317 [92mIDE --> LS REQU textDocument/documentSymbol 157[0m
+10:44:18.751317 [92m                textDocument/documentSymbol 157: [93mread-locked[0m[0m
+10:44:18.751317 [92m                textDocument/documentSymbol 157: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp[0m
+10:44:18.751317 [91mIDE     LS --> Clangd REQU textDocument/documentSymbol 157[0m
+10:44:18.751317 OUT Elapsed: 0s
+10:44:18.868763 IN Elapsed: 1m10.6262215s
+10:44:18.869179 [31mIDE     LS <-- Clangd RESP textDocument/documentSymbol 157[0m
+10:44:18.869179 [92m                textDocument/documentSymbol 157: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp (8 document symbols)[0m
+10:44:18.869179 [92m                textDocument/documentSymbol 157:   > convert SymbolKind:Variable 22:0-22:29[0m
+10:44:18.870404 [92m                textDocument/documentSymbol 157: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:22:0-22:29 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:20:0-20:29 (.ino)[0m
+10:44:18.871449 [92m                textDocument/documentSymbol 157: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:22:14-22:29 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:20:14-20:29 (.ino)[0m
+10:44:18.871449 [92m                textDocument/documentSymbol 157: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp (0 document symbols)[0m
+10:44:18.871449 [92m                textDocument/documentSymbol 157:   > convert SymbolKind:Variable 23:0-23:29[0m
+10:44:18.872492 [92m                textDocument/documentSymbol 157: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:23:0-23:29 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:21:0-21:29 (.ino)[0m
+10:44:18.873532 [92m                textDocument/documentSymbol 157: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:23:14-23:29 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:21:14-21:29 (.ino)[0m
+10:44:18.873532 [92m                textDocument/documentSymbol 157: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp (0 document symbols)[0m
+10:44:18.873532 [92m                textDocument/documentSymbol 157:   > convert SymbolKind:Variable 24:0-24:33[0m
+10:44:18.874598 [92m                textDocument/documentSymbol 157: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:24:0-24:33 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:22:0-22:33 (.ino)[0m
+10:44:18.875626 [92m                textDocument/documentSymbol 157: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:24:14-24:25 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:22:14-22:25 (.ino)[0m
+10:44:18.875626 [92m                textDocument/documentSymbol 157: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp (0 document symbols)[0m
+10:44:18.875626 [92m                textDocument/documentSymbol 157:   > convert SymbolKind:Variable 25:0-25:32[0m
+10:44:18.876668 [92m                textDocument/documentSymbol 157: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:25:0-25:32 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:23:0-23:32 (.ino)[0m
+10:44:18.877709 [92m                textDocument/documentSymbol 157: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:25:14-25:25 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:23:14-23:25 (.ino)[0m
+10:44:18.877709 [92m                textDocument/documentSymbol 157: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp (0 document symbols)[0m
+10:44:18.877709 [92m                textDocument/documentSymbol 157:   > convert SymbolKind:Function 28:0-28:12[0m
+10:44:18.878750 [92m                textDocument/documentSymbol 157: Range is in PREPROCESSED section of the sketch[0m
+10:44:18.878750 [92m                textDocument/documentSymbol 157: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:28:0-28:12 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:25:0-25:12 (.ino)[0m
+10:44:18.878750 [92m                textDocument/documentSymbol 157:     symbol is in the preprocessed section of the sketch.ino.cpp, skipping[0m
+10:44:18.878750 [92m                textDocument/documentSymbol 157:   > convert SymbolKind:Function 30:0-30:11[0m
+10:44:18.879798 [92m                textDocument/documentSymbol 157: Range is in PREPROCESSED section of the sketch[0m
+10:44:18.879798 [92m                textDocument/documentSymbol 157: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:30:0-30:11 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:41:0-41:11 (.ino)[0m
+10:44:18.879798 [92m                textDocument/documentSymbol 157:     symbol is in the preprocessed section of the sketch.ino.cpp, skipping[0m
+10:44:18.879798 [92m                textDocument/documentSymbol 157:   > convert SymbolKind:Function 32:0-47:1[0m
+10:44:18.880884 [92m                textDocument/documentSymbol 157: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:32:0-47:1 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:25:0-40:1 (.ino)[0m
+10:44:18.881389 [92m                textDocument/documentSymbol 157: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:32:5-32:10 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:25:5-25:10 (.ino)[0m
+10:44:18.881389 [92m                textDocument/documentSymbol 157: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp (0 document symbols)[0m
+10:44:18.881389 [92m                textDocument/documentSymbol 157:   > convert SymbolKind:Function 48:2-66:3[0m
+10:44:18.883225 [92m                textDocument/documentSymbol 157: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:48:2-66:3 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:41:2-59:3 (.ino)[0m
+10:44:18.884266 [92m                textDocument/documentSymbol 157: Range: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:48:7-48:11 -> file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:41:7-41:11 (.ino)[0m
+10:44:18.884266 [92m                textDocument/documentSymbol 157: file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp (0 document symbols)[0m
+10:44:18.884266 [92m                textDocument/documentSymbol 157: [93mread-unlocked[0m[0m
+10:44:18.884516 [32mIDE <-- LS RESP textDocument/documentSymbol 157[0m
+10:44:18.884516 OUT Elapsed: 0s
+10:44:40.766053 IN Elapsed: 21.8815376s
+10:44:40.766053 [92mIDE --> LS REQU textDocument/documentHighlight 158[0m
+10:44:40.766053 [92m                textDocument/documentHighlight 158: [93mread-locked[0m[0m
+10:44:40.772650 [92m                textDocument/documentHighlight 158: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp[0m
+10:44:40.776290 [92m                textDocument/documentHighlight 158: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:38:42 -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:45:42[0m
+10:44:40.776290 [91mIDE     LS --> Clangd REQU textDocument/documentHighlight 158[0m
+10:44:40.776290 OUT Elapsed: 0s
+10:44:40.779510 IN Elapsed: 21.9107469s
+10:44:40.779510 [31mIDE     LS <-- Clangd RESP textDocument/documentHighlight 158[0m
+10:44:40.779510 [92m                textDocument/documentHighlight 158: [93mread-unlocked[0m[0m
+10:44:40.779510 [32mIDE <-- LS RESP textDocument/documentHighlight 158[0m
+10:44:40.779510 OUT Elapsed: 0s
+10:44:40.931242 IN Elapsed: 151.7322ms
+10:44:40.931242 [92mIDE --> LS REQU textDocument/codeAction 159[0m
+10:44:40.931242 [92m                textDocument/codeAction 159: [93mread-locked[0m[0m
+10:44:40.931242 [92m                textDocument/codeAction 159: --> codeAction(file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino:38:42)[0m
+10:44:40.932941 [92m                textDocument/codeAction 159: URI: file:///c%3A/Users/User/OneDrive%20-%20%40JMTS/Documentos/GitHub/Reloj_Temperatura_Humedad/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino -> file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp[0m
+10:44:40.936078 [92m                textDocument/codeAction 159:     --> codeAction(file:///c%3A/Users/User/AppData/Local/Temp/arduino-language-server3584915560/sketch/Esp32_Dht_php_WiFi_OTA_POST_configuracion_v1.ino.cpp:38:42)[0m
+10:44:40.936078 [91mIDE     LS --> Clangd REQU textDocument/codeAction 159[0m
+10:44:40.936078 OUT Elapsed: 0s
+10:44:40.936604 IN Elapsed: 157.094ms
+10:44:40.936604 [31mIDE     LS <-- Clangd RESP textDocument/codeAction 159[0m
+10:44:40.936604 [92m                textDocument/codeAction 159: [93mread-unlocked[0m[0m
+10:44:40.936604 [32mIDE <-- LS RESP textDocument/codeAction 159[0m
+10:44:40.936604 OUT Elapsed: 0s
+10:44:42.461025 IN Elapsed: 1.5244212s
+10:44:42.461025 [92mIDE --> LS REQU shutdown 160[0m
+10:44:42.461025 [91mIDE     LS --> Clangd REQU shutdown 160[0m
+10:44:42.461025 OUT Elapsed: 0s
+10:44:42.473224 IN Elapsed: 1.5366202s
+10:44:42.473732 [31mIDE     LS <-- Clangd RESP shutdown 160[0m
+10:44:42.473732 [32mIDE <-- LS RESP shutdown 160[0m
+10:44:42.473732 OUT Elapsed: 0s
+10:44:42.476739 IN Elapsed: 3.0066ms
+10:44:42.476739 [92mIDE --> LS NOTIF exit[0m
+10:44:42.477621 [91mIDE     LS --> Clangd NOTIF exit[0m
+10:44:42.478127 OUT Elapsed: 506.2µs
+10:44:42.478127 [92m                 exit: Arduino Language Server is exiting.[0m
+10:44:42.478127 [91mIDE     LS --> Clangd NOTIF exit[0m
+10:44:42.478127 OUT Elapsed: 0s
+10:44:42.572390 [96mINIT --- : Lost connection with clangd![0m
