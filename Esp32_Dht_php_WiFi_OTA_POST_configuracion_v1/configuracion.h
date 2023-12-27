@@ -8,10 +8,6 @@
 #define DHTPIN 27     // Se define el puerto al que conectamos el Sensor DHT: pin digital 27
 #define LED_PIN 2 // Led integrado en el PIN2
 
-#include <PWMOutESP32.h>
-
-PWMOutESP32 pwm;
-
 // Configuración de la Ubicación
 // tambien da nombre al puerto de actualizacion via OTA
 byte ub = 1;// Ubicación (1-despacho) (2-salon) (3-pruebas)

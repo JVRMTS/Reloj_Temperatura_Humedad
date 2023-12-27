@@ -41,27 +41,20 @@ void setup()
 }
   void loop()
   {
-    //Si se ha perdido la conexión wifi llamamos a la función para conectar de nuevo y configuramos fecha y hora
+  //Si se ha perdido la conexión wifi llamamos a la función para conectar de nuevo y configuramos fecha y hora
     if (WiFi.isConnected() == false){
       conectarWiFi();
       }
-
-    // Llamamos a la función para imprimir los datos en el LCD cada segundo
-    unsigned long currentMillis = millis();
+    mostrarPantalla(); // Mostramos los datos en pantalla en cada loop
+    iluminacion();     // Controlamos la retroiluminación de la pantalla en cada loop
     
+    unsigned long currentMillis = millis();
     // Llamamos, cada minuto, a la función para insertar los datos en la base de datos
     if ((unsigned long) (currentMillis - previosMillis_0) >= intervalo_0){
         enviarBD();
         previosMillis_0 = millis();
       }
-    if ((unsigned long) (currentMillis - previosMillis_1) >= intervalo_1){
-        mostrarPantalla();
-        previosMillis_1 = millis();
-      }
-    
-    // Llamamos a la función iluminacion que controla la retroiluminación de la pantalla
-    iluminacion();
-     
+  
     ArduinoOTA.handle(); //Llamamos a la actualización via OTA
 
   }
