@@ -1,4 +1,13 @@
-Actualización del 26/10/23
+
+ACTUALIZACIÓN DEL 29/12/23
+
+Se ha actualizado el nombre y la carpeta del archivo .ino, se han creado nuevos archivos para que alberguen las distintas funciones
+y así poder reutilizarlas en distintos proyectos, ahora la definición de pines y librerias de cada biblioteca estan en cada fichero.
+
+Es importante mantener el orden de los includes en el script principal, si no lo haces te dará fallo en la compilación.
+
+ACTUALIZACIÓN DEL 26/10/2023
+
 Se cambia la libreria AnalogWrite por PWMOutESP32 que realiza la misma función, al impedirme la primera compilar. 
 Tambien me ha dado problemas la actualización vía OTA, se soluciono conectando el módulo via USB y ya aparecio como puerto ota.
 
