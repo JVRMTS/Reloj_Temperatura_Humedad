@@ -2,8 +2,15 @@
  * y escribiendo con la libreria PWMOutESP32.h en el pin de la retroiluminación
  * Creado el 26/12/2023
 */
+
 #include <PWMOutESP32.h>
 PWMOutESP32 pwm;
+
+// Asignamos los pines de la iluminación del LCD y del LDR y declaramos sus variables
+const int pinLCD = 18;
+const int pinLDR = 32;
+unsigned int valorLDR;
+unsigned int valorLCD;
 
 void iluminacion(){
 // Comprobamos la intensidad de la luz

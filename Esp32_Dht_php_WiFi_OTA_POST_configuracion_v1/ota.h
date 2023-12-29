@@ -1,7 +1,10 @@
 /*
  * 16/06/2021
 */
+#include <WiFiUdp.h>
 #include <ArduinoOTA.h>
+#include <ArduinoOTA.h>
+
 void actualizacionOTA(){
 
 // ACTUALIZACIONES VIA OTA

@@ -10,12 +10,14 @@
  * 16/10/2021
  */
 #include "configuracion.h"
+#include "sensorDHT.h"
 #include "reloj.h"
+#include "LCD.h"
 #include "conexionWiFi.h"
 #include "baseDatos.h"
-#include "ota.h"
 #include "ldr.h"
-
+#include "ota.h"
+#define LED_PIN 2 // Led integrado en el PIN2
 
 // Iniciamos los contadores para insertar en la base de datos y actualizar el reloj
 unsigned long previosMillis_0;
@@ -41,7 +43,7 @@ void setup()
 }
   void loop()
   {
-  //Si se ha perdido la conexión wifi llamamos a la función para conectar de nuevo y configuramos fecha y hora
+    //Si se ha perdido la conexión wifi llamamos a la función para conectar de nuevo y configuramos fecha y hora
     if (WiFi.isConnected() == false){
       conectarWiFi();
       }
@@ -56,5 +58,4 @@ void setup()
       }
   
     ArduinoOTA.handle(); //Llamamos a la actualización via OTA
-
   }
