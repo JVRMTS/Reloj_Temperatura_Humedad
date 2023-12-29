@@ -1,6 +1,6 @@
 /*
  * Funciones para mostrar en el LCD los datos de reloj y sensor DHT
- * 24/03/2021
+ * 27/12/2023
  */
 
 #include <Time.h>
@@ -29,8 +29,8 @@ void fecha(){
       return;
    }
    // Conseguir el día de la semana corto en castellano
-   String diaSemana[] = {"Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"};
-   String diaS = diaSemana[timeinfo.tm_wday];
+   char *diaSemana[] = {"Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"};
+   diaS = diaSemana[timeinfo.tm_wday];
    // Conseguir el mes en castellano
    String meses[] = {"Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"};
    // Asignar valor a las variables que mostraremos en pantalla

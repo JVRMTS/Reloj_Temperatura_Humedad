@@ -48,14 +48,17 @@ void setup()
       conectarWiFi();
       }
     mostrarPantalla(); // Mostramos los datos en pantalla en cada loop
-    iluminacion();     // Controlamos la retroiluminación de la pantalla en cada loop
-    
+    // Declaramos la variable para contar los segundos
     unsigned long currentMillis = millis();
     // Llamamos, cada minuto, a la función para insertar los datos en la base de datos
     if ((unsigned long) (currentMillis - previosMillis_0) >= intervalo_0){
         enviarBD();
         previosMillis_0 = millis();
       }
-  
+    // Llamamos, cada segundo, a la función para controlar la retroiluminación de la pantalla.  
+    if ((unsigned long) (currentMillis - previosMillis_1) >= intervalo_1){
+        iluminacion();     // Controlamos la retroiluminación de la pantalla en cada loop
+        previosMillis_1 = millis();
+      }
     ArduinoOTA.handle(); //Llamamos a la actualización via OTA
   }
