@@ -5,6 +5,7 @@ Se ha actualizado el nombre y la carpeta del archivo .ino, se han creado nuevos 
 y así poder reutilizarlas en distintos proyectos, ahora la definición de pines y librerias de cada biblioteca estan en cada fichero.
 
 Es importante mantener el orden de los includes en el script principal, si no lo haces te dará fallo en la compilación.
+Ahora en el archivo configuracion.h solo se define la ubicación, la WiFi, la contraseña WiFi, la contraseña OTA y el dominio web si para actualizar la base de datos.
 
 ACTUALIZACIÓN DEL 26/10/2023
 
