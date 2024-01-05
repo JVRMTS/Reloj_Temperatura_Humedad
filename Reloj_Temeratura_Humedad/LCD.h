@@ -22,7 +22,7 @@ void mostrarPantalla(){
    lcd.setCursor(7, 0);
    lcd.print(horMin);
    lcd.setCursor(2, 1);
-   lcd.print(diaS + " " + dia + " " + mes + " " + ano);// Imprimimos la fecha
+   lcd.print(diaS + " " + dia + " " + mes + " " + ano +" ");// Imprimimos la fecha
    lcd.setCursor(0, 2);  // Se situa el cursor en la segunda linea del LCD
    lcd.print(t1);        // Se imprime la temperatura en el LCD
    lcd.setCursor(11, 2); // Se situa el cursor en la tercera linea en la posición 4 para que cuadre
