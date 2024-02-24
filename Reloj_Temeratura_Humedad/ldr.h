@@ -1,6 +1,7 @@
 /* Control de la retroiluminación de la pantalla, mediante la lectura de una LDR
  * y escribiendo con la libreria PWMOutESP32.h en el pin de la retroiluminación
  * Creado el 26/12/2023
+ * @JMTS - www.jmts.es
 */
 
 #include <PWMOutESP32.h>
