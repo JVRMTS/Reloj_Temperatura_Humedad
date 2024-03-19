@@ -34,9 +34,12 @@ void setup()
   lcd.backlight();      // Se enciende la retroiluminación del lcd
   lcd.clear();          // Se borra la pantalla del lcd
   dht.begin();          // Se inicia la lectura del dht
-
-  // Conexion a la wifi y sincronización del reloj NTP
+  
+  // Conexion a la wifi
   conectarWiFi();
+  
+  // Configuramos el reloj
+  configReloj();        
 
   // Configuramos la actualización via OTA
   actualizacionOTA();

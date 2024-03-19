@@ -16,7 +16,7 @@ unsigned int valorLCD;
 void iluminacion(){
 // Comprobamos la intensidad de la luz
     valorLDR = analogRead(pinLDR); // Leemos la variable del LDR
-    unsigned int x = valorLDR / 8;
+    unsigned int x = valorLDR;
     if(x < 6){
       valorLCD = 5; // esto es para que nunca se apaque del todo el LCD
     }else{

@@ -34,5 +34,5 @@ const char *password = "*****";
 char *passwordOTA = "*****";
 
 //Configuración del Servidor Web
-String dominio = "tu_dominio"; // El dominio en el que lo quieras publicar
+String dominio = "tu_dominio.com"; // El dominio en el que lo quieras publicar
 String url = "http://" + dominio + "/config/insertar_post.php"; //Dirección web del servidor
