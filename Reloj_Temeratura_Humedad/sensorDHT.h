@@ -1,7 +1,7 @@
 /*
  / Configuración y función para la toma de datos de un sensor DHT, esta probado con DHT11 y DHT22 en Esp32 Dev Module
  / creado por JMTS
- / EL 27/12/2024
+ / EL 27/12/2023
 */
 
 #include <DHT.h>

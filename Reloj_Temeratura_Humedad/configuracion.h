@@ -7,31 +7,36 @@
 // Configuración de la Ubicación
 // tambien da nombre al puerto de actualizacion via OTA
 
-byte ub = 2;// Ubicación (1-despacho) (2-salon) (3-pruebas)
+byte ub = 1;// Ubicación (1-despacho) (2-salon) (3-dormitorio) (4-resumen) (5-pruebas)
 
-char* ubicacion(){
-  char *ubic;
-  if (ub == 1)
-  {
-    ubic = "Despacho";
-  }
-  else if (ub == 2)
-  {
-    ubic = "Salon";
-  }
-  else if (ub == 3)
-  {
-    ubic = "Pruebas";
+char * ubicacion(){
+  char * ubic;
+  switch (ub) {
+    case 1:
+      ubic = "DESPACHO";
+    break;
+    case 2:
+      ubic = "SALON";
+    break;
+    case 3:
+      ubic = "DORMITORIO";
+    break;
+    case 4:
+      ubic = "RESUMEN";
+    break;
+    case 5:
+      ubic = "PRUEBAS";
+    break;
   }
   return ubic;
 }
 
 //Configuración de la WiFi
-const char *ssid = "*****";
-const char *password = "*****";
+char * ssid = "*****";
+char * password = "*****";
 
 //Password para la actualización via OTA
-char *passwordOTA = "*****";
+char * passwordOTA = "*****";
 
 //Configuración del Servidor Web
 String dominio = "tu_dominio.com"; // El dominio en el que lo quieras publicar
