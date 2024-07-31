@@ -16,12 +16,12 @@ unsigned int valorLCD;
 
 // Configuración canal analógico
 void configLedc(){
-  analogWriteResolution(PINLCD, 8);  // Configuramos la resoloción de escritura en el pin seleccionado
+  analogWriteResolution(PINLCD, 8);   // Configuramos la resoloción de escritura en el pin seleccionado a una resolución de 8 bits
   analogWriteFrequency(PINLCD,5000);  // Configuramos la frecuencia de escritura en el pin seleccionado
 }
 
 void iluminacion(){
-  valorLDR = analogRead(PINLDR)/16;      // Leemos la variable del LDR y lo convertimos a 8 bits
+  valorLDR = analogRead(PINLDR)/16;   // Leemos la variable del LDR y lo convertimos a 8 bits
   // Comprobamos la intenisad lumínica mínima para que no se apague nunca el LCD
   if(valorLDR <= MINIMO){
     valorLCD = MINIMO;                // Ajustamos un mínimo de iluminación
